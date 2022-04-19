@@ -1,0 +1,45 @@
+*,
+*::before *::after {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.mainHeading {
+
+    padding-bottom: 0.3 rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid grey
+}
+
+.quizArea {
+    width: 60vw;
+    height: 25vh;
+
+    background-color: #ffff;
+    border-radius: 8px;
+    padding: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.btnArea {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
