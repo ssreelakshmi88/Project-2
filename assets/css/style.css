@@ -28,7 +28,6 @@ body {
 .quizArea {
     width: 60vw;
     height: 25vh;
-
     background-color: #ffff;
     border-radius: 8px;
     padding: 10px;
@@ -42,4 +41,21 @@ body {
     grid-template-columns: repeat(2, auto);
     gap: 10px;
     margin: 20px 0;
+}
+
+.start {
+    width: 200px;
+    height: 60px;
+    color: #ffff;
+    background-color: darkblue;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 4px;
+    transition: ease-out 0.3s;
+    border: 2px solid black;
+}
+
+.start:hover {
+    background-color: rgb(225, 0, 68);
+    color: white;
 }
