@@ -7,6 +7,7 @@ Quiz game is a site developed to test users general knowledge. This quiz applica
 ### Existing Features
 
 - **Cover page**
+- 
    a. This section contains the “Start Quiz” button. A click on this button will take to appended HTML pages with questions.
    
    b. The background image and the logo is designed to capture the attention of the user and keep them engrossed.
@@ -20,7 +21,9 @@ Quiz game is a site developed to test users general knowledge. This quiz applica
    c. o	A button to take to the appended HTML pages that contains subsequent questions.
    
 - **Score section**
-    a. An appended HTML page that contains the final score calculated by the number of correct answers.
+
+  a. An appended HTML page that contains the final score calculated by the number of correct answers.
+    
    b. A Summary of how many questions answered correctly.
    
    c. A button to return to the quiz.
