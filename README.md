@@ -30,7 +30,8 @@ Quiz game is a site developed to test users general knowledge. This quiz applica
 ###    Wireframes
 
 
-   
+   [Wireframes.zip](https://github.com/ssreelakshmi88/Project-2/files/8534254/Wireframes.zip)
+
 ###    Testing
 - The game has been tested in different browsers: Chrome, Safari and Firefox.
 
