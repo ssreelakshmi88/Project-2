@@ -15,6 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: salmon;
 }
 
 
@@ -43,8 +44,8 @@ body {
     margin: 20px 0;
 }
 
-.start {
-    width: 200px;
+.btn {
+    width: 500px;
     height: 60px;
     color: #ffff;
     background-color: darkblue;
@@ -55,7 +56,7 @@ body {
     border: 2px solid black;
 }
 
-.start:hover {
+.btn:hover {
     background-color: rgb(225, 0, 68);
     color: white;
 }
