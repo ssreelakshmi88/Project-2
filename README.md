@@ -33,7 +33,25 @@ Quiz game is a site developed to test users general knowledge. This quiz applica
 ###    Wireframes
 
 
-   [Wireframes.zip](https://github.com/ssreelakshmi88/Project-2/files/8534254/Wireframes.zip)
+###    Desktop Wireframes
+
+  ![Desktop Wireframe (Page1)](https://user-images.githubusercontent.com/97182442/164991864-186595c0-ea81-4d60-8993-e1c12d5dfc49.png)
+  
+  
+![Desktop Wireframe (Page2)](https://user-images.githubusercontent.com/97182442/164991895-9ba1cac7-ffba-4416-82ee-d8c8c1730386.png)
+
+
+![Desktop Wireframe (Page3)](https://user-images.githubusercontent.com/97182442/164991898-614783dd-fd45-4c85-a290-5e3bcc6482ab.png)
+
+
+###    Mobile Wireframe
+
+
+
+
+
+![Mobile Wireframe](https://user-images.githubusercontent.com/97182442/164991909-233ae720-66dd-4553-a1f6-2987882aebf0.png)
+
 
 ###    Testing
 - The game has been tested in different browsers: Chrome, Safari and Firefox.
