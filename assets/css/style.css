@@ -10,38 +10,43 @@
 body {
 
     display: flex;
-    width: 100vw;
+    width: 90vw;
     height: 80vh;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: salmon;
+    background-color: white;
+    background-color: powderblue;
 }
 
 img {
-    width: 5.5rem;
-    height: 5.2rem;
-    border-radius: 50%;
-    position: fixed;
-}
+    width: 11rem;
+    height: 5rem;
+    border-radius: 100%;
+    bottom: 170px;
+    right: -370px;
+    position: relative;
 
+}
 
 .mainHeading {
 
-    padding-bottom: 0.3 rem;
+    padding-bottom: 0.5 rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid grey
 }
 
 .quizArea {
-    width: 60vw;
+    width: 50vw;
     height: 25vh;
     background-color: #ffff;
     border-radius: 8px;
     padding: 10px;
     border-radius: 5px;
-    padding: 10px;
     box-shadow: 0 0 10px 2px;
+    text-align: center;
+    margin-top: 50px;
+    margin-right: 50px;
 }
 
 .btnArea {

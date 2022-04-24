@@ -1,7 +1,59 @@
-#title {
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap');
+
+body {
+
+    background-color: whitesmoke;
+
+}
+
+header {
+
+    width: 100vw;
+    padding-right: 5px;
+}
+
+
+img {
+    width: 10rem;
+    height: 0.8rem 0;
+    border-radius: 100%;
+    bottom: 170px;
+    margin-left: 500px;
+}
+
+.heading {
 
     text-align: center;
-    padding: 0.9rem 0;
-    font-size: 5 rem;
-    color: black;
+    padding: 3px;
+    margin-right: 80px;
+    font-size: 1.5rem;
+    color: #973397;
+    ;
+    font-family: Montserrat, sans serif;
+}
+
+.puzzle {
+
+    margin: 3rem auto;
+    width: 100vw;
+    padding: 2 rem;
+
+    cursor: default;
+    border-radius: 1 rem;
+}
+
+.choice {
+
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px 2px;
+    border-bottom: solid 0.2rem rgb(13, 13, 182);
+    width: 30%;
+    border-radius: 0.1 rem solid rem;
+}
+
+span {
+    display: block;
+    padding: 0.1 rem 0.7rem;
+    border-radius: 2rem;
 }
