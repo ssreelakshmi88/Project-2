@@ -18,6 +18,13 @@ body {
     background-color: salmon;
 }
 
+img {
+    width: 5.5rem;
+    height: 5.2rem;
+    border-radius: 50%;
+    position: fixed;
+}
+
 
 .mainHeading {
 

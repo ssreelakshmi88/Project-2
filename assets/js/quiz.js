@@ -1,4 +1,4 @@
-let puzzleContainer = [{
+let questionContainer = [{
         puzzle: 'What was the destination of the missing flight MH370?',
         choice: ['Kuala Lumpur', 'Beijing', 'Singapore', 'Tokyo'],
         answer: 'Beijing'
@@ -6,7 +6,7 @@ let puzzleContainer = [{
 
     {
         puzzle: 'Who is the founder of &quot;The Lego Group&quot;?',
-        choice: ['Gerhardt Kirk Christiansen', 'Kirstine Christiansen', 'Jens Niels Christiansen', 'Tokyo'],
+        choice: ['Gerhardt Kirk Christiansen', 'Kirstine Christiansen', 'Jens Niels Christiansen', 'Ole Kirk Christiansen'],
         answer: 'Ole Kirk Christiansen'
     },
     {
@@ -50,8 +50,61 @@ let puzzleContainer = [{
 
         choice: ['Snivy, Fennekin, Froakie', 'Snivy, Tepig, Oshawotts', 'Chespin, Tepig, Froakie', 'Chespin, Fennekin, Oshawott'],
         answer: 'Snivy, Tepig, Oshawott'
-    },
+    }
 ]
 
-let pContainer = document.getElementById('puzzle-container');
+let puzzleContainer = document.getElementById('puzzle-container');
 let puzzle = document.getElementById('puzzles');
+let choice0 = document.getElementById('choice0');
+let choice1 = document.getElementById('choice1');
+let choice2 = document.getElementById('choice2');
+let choice3 = document.getElementById('choice3');
+let next = document.querySelector('.next');
+var score = document.getElementById('score');
+var span = document.querySelectorAll('span');
+var i = 0;
+var score = 0;
+
+function displayPuzzle() {
+    puzzle.innerHTML = 'No.' + (i + 1) + ' ' + questionContainer[i].puzzle;
+    choice0.innerHTML = questionContainer[i].choice[0];
+    choice1.innerHTML = questionContainer[i].choice[1];
+    choice2.innerHTML = questionContainer[i].choice[2];
+    choice3.innerHTML = questionContainer[i].choice[3];
+}
+
+function calcScore(e) {
+    if (e.innerHTML === questionContainer[i].answer && score < questionContainer.length) {
+        score = score + 1;
+        document.getElementById(e.id).style.background = 'limegreen';
+    } else {
+        document.getElementById(e.id).style.background = 'tomato';
+    }
+}
+
+function nextPuzzle() {
+    if (i < questionContainer.length - 1) {
+        i = i + 1;
+        displayPuzzle();
+    } else {
+        score.innerHTML = score + '/' + questionContainer.length
+        puzzleContainer.style.display = 'none';
+    }
+}
+next.addEventListener('click', nextPuzzle);
+
+function backToQuiz() {
+    location.reload();
+}
+
+function checkAnswer() {
+    let answerContainer = document.getElementById('answer-container');
+    let answers = document.getElementById('answers');
+    answerContainer.style.display = 'block'
+    for (let a = 0; a < questionContainer.length; a++) {
+        let list = document.createElement('li');
+        list.innerHTML = questionContainer[a].answer;
+        answers.appendChild(list);
+    }
+}
+displayPuzzle();
