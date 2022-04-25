@@ -66,6 +66,9 @@ var i = 0;
 var score = 0;
 
 function displayPuzzle() {
+    for (let x = 0; x < span.length; x++) {
+        span[x].style.background = 'none';
+    }
     puzzle.innerHTML = 'No.' + (i + 1) + ' ' + questionContainer[i].puzzle;
     choice0.innerHTML = questionContainer[i].choice[0];
     choice1.innerHTML = questionContainer[i].choice[1];
@@ -76,9 +79,9 @@ function displayPuzzle() {
 function calcScore(e) {
     if (e.innerHTML === questionContainer[i].answer && score < questionContainer.length) {
         score = score + 1;
-        document.getElementById(e.id).style.background = 'limegreen';
+        document.getElementById(e.id).style.background = 'green';
     } else {
-        document.getElementById(e.id).style.background = 'tomato';
+        document.getElementById(e.id).style.background = 'red';
     }
 }
 
