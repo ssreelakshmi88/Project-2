@@ -8,25 +8,36 @@
 }
 
 body {
-
-    display: flex;
     width: 90vw;
     height: 80vh;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     background-color: white;
     background-color: powderblue;
 }
 
 img {
-    width: 11rem;
+    width: 8rem;
+    float: left;
     height: 5rem;
     border-radius: 100%;
-    bottom: 170px;
-    right: -370px;
+    right: 10px;
     position: relative;
+}
 
+.menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+
+}
+
+.menu li {
+    float: right;
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+img,
+.menu {
+    line-height: 75px;
 }
 
 .mainHeading {
@@ -35,6 +46,7 @@ img {
     margin-bottom: 1rem;
     border-bottom: 1px solid grey
 }
+
 
 .quizArea {
     width: 50vw;
@@ -66,9 +78,4 @@ img {
     border-radius: 4px;
     transition: ease-out 0.3s;
     border: 2px solid black;
-}
-
-.btn:hover {
-    background-color: rgb(225, 0, 68);
-    color: white;
 }
