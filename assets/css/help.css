@@ -1,0 +1,17 @@
+.help-container h1 {
+    margin-bottom: 25px;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.btn-start {
+
+    text-align: center;
+    padding-top: 50px;
+    font-size: 3.5rem;
+    color: blue;
+}
+
+.btn-start a:hover {
+    color: green;
+}
