@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game-Contact</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <a href="/quiz.html"></a>
+</head>
+
+<body>
+    <header class="logo-img">
+        <a href="index.html">
+            <img src="../assets/images/logo.jpg" alt="quiz logo">
+        </a>
+        <nav>
+            <ul class="menu">
+                <li>
+                    <a href="help.html">Help</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a class="new" href="new.html">New Game</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    <div class="contact-body">
+
+        <div class="contact-form">
+            <h3 class="contact-h3">Contact us</h3>
+
+            <form method="POST" action="https://formdump.codeinstitute.net/" id="contact-form-id"
+                class="contact-form-class">
+
+                <div class="contact-form-group">
+                    <label for="Name" class="contact-label">Your name</label>
+                    <div class="contact-input-group">
+                        <input type="text" id="Name" name="Name" class="contact-form-control" required>
+                    </div>
+                </div>
+
+                <div class="contact-form-group">
+                    <label for="Email" class="contact-label">Your email address</label>
+                    <div class="contact-input-group">
+                        <input type="email" id="Email" name="Email" class="contact-form-control" required>
+                    </div>
+                </div>
+
+                <div class="contact-form-group">
+                    <label for="Message" class="contact-label">Your message</label>
+                    <div class="contact-input-group">
+                        <textarea id="Message" name="Message" class="contact-form-control" rows="6" maxlength="3000"
+                            required></textarea>
+                    </div>
+                </div>
+
+                <div class="contact-form-group">
+                    <button type="submit" id="contact-button"
+                        class="contact-btn contact-btn-primary contact-btn-lg contact-btn-block">Send Message</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

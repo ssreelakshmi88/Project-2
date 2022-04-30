@@ -24,11 +24,22 @@ img {
 }
 
 .menu {
-    font-size: 110%;
+    font-size: 1.5rem;
     letter-spacing: 4px;
-    color: #333;
 
 }
+
+.menu a {
+    text-decoration: none;
+}
+
+
+.menu a:hover {
+    border-bottom: 1px solid blue;
+
+}
+
+
 
 .menu li {
     float: right;
@@ -44,7 +55,7 @@ img,
 
 h1 {
     font-size: 3.5rem;
-    color: purple;
+    color: rgb(44, 34, 182);
     margin-bottom: 5rem;
 }
 
@@ -82,25 +93,19 @@ h1 {
     padding: 1rem 0;
     width: 20rem;
     text-align: center;
-    border: 0.1rem solid purple;
+    border: 0.1rem solid rgb(44, 34, 182);
     margin-bottom: 1rem;
     text-decoration: none;
-    color: grey;
+    background-color: rgb(44, 34, 182);
+    color: white;
 
 }
 
-btn:hover {
-    cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
-    transform: translateY(-0.1rem);
-    transition: transform 150ms;
+.btn:hover {
+    background-color: brown;
 }
 
-.btn[disabled]:hover {
-    cursor: not-allowed;
-    box-shadow: none;
-    transform: none;
-}
+
 
 .btn-li {
 
@@ -110,13 +115,15 @@ btn:hover {
 
 p {
     font-size: 2.5rem;
-    color: #14abecdd;
+    color: rgb(44, 34, 182);
+    text-decoration: underline;
 }
+
 
 .btn-level {
     font-size: 2rem;
     margin-bottom: 4rem;
     font-weight: 700;
-    color: #14abecdd;
+    color: rgb(44, 34, 182);
 
 }
