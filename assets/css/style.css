@@ -127,3 +127,86 @@ p {
     color: rgb(44, 34, 182);
 
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+
+    img {
+
+        width: 20vw;
+        height: auto;
+
+    }
+
+    .menu li {
+
+
+        padding-left: 0;
+        margin: 3.2%;
+        font-size: 3.5vmin;
+
+    }
+
+
+
+
+    .container {
+        height: 80vh;
+        padding-top: 7px;
+    }
+
+
+    h1 {
+        font-size: 2rem;
+        padding-left: 46px;
+    }
+
+    .btn {
+        padding-left: 46px;
+        width: 7rem;
+        text-align: justify;
+        margin-left: 35px;
+    }
+
+    p {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        margin-left: 31px;
+    }
+
+}
+
+@media only screen and (device-width : 375px) and (device-height : 812px) and (-webkit-device-pixel-ratio : 3) {
+    .menu li {
+
+        padding-left: 0;
+        margin: 3.2%;
+        font-size: 3.5vmin;
+
+    }
+
+    .container {
+        height: 60vh;
+        padding-top: 15px;
+    }
+
+    h1 {
+        font-size: 1rem;
+        padding-left: 46px;
+    }
+
+    .btn {
+        padding-left: 46px;
+        width: 7rem;
+        text-align: justify;
+        margin-left: 35px;
+    }
+
+    p {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        margin-left: 31px;
+    }
+
+}

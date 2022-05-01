@@ -30,3 +30,30 @@ img,
 .btn-start a:hover {
     color: green;
 }
+
+@media only screen and (device-width : 375px) and (device-height : 812px) and (-webkit-device-pixel-ratio : 3) {
+
+    .help-container li {
+        line-height: 1.6;
+        line-break: normal;
+        font-size: 1.5rem;
+    }
+
+
+    .btn-start {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+
+    .help-container li {
+        line-height: 3;
+        line-break: normal;
+        font-size: 2.5rem;
+
+    }
+
+
+}
