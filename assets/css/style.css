@@ -54,20 +54,21 @@ img,
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 3.3rem;
     color: rgb(44, 34, 182);
     margin-bottom: 5rem;
 }
 
 .container {
     width: 60vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 80rem;
     margin: 2 auto;
     padding: 2rem;
+    padding-top: 85px;
 }
 
 .flex-column {
@@ -98,7 +99,6 @@ h1 {
     text-decoration: none;
     background-color: rgb(44, 34, 182);
     color: white;
-
 }
 
 .btn:hover {
