@@ -1,61 +1,63 @@
-let questionContainer = fetch('https://opentdb.com/api.php?amount=20&category=9&difficulty=easy&type=multiple').then(response => response.json())
+const question = document.getElementById('question');
+const options = Array.from(document.getElementsByClassName('option-text'));
+let numberAnswers = false;
+let points = 0;
+let questionBank = 0;
+let currentQuestion = {};
+let numberQuestions = [];
+let addquestions = [];
 
 
-let puzzleContainer = document.getElementById('puzzle-container');
-let puzzle = document.getElementById('puzzles');
-let choice0 = document.getElementById('choice0');
-let choice1 = document.getElementById('choice1');
-let choice2 = document.getElementById('choice2');
-let choice3 = document.getElementById('choice3');
-let next = document.querySelector('.next');
-var score = document.getElementById('score');
-var span = document.querySelectorAll('span');
-var i = 0;
-var score = 0;
+fetch(
+        'https://opentdb.com/api.php?amount=20&category=9&difficulty=easy&type=multiple')
 
-function displayPuzzle() {
-    for (let x = 0; x < span.length; x++) {
-        span[x].style.background = 'none';
+    .then((res) => {
+        return res.json();
+    })
+    .then((showQuestions) => {
+
+        addquestions = showQuestions.results.map((showQuestions) => {
+            const modifiedQuestion = {
+                question: showQuestions.question,
+            };
+
+            const possibleAnswers = [...showQuestions.incorrect_answers];
+            modifiedQuestion.answer = Math.floor(Math.random() * 4) + 1;
+            possibleAnswers.splice(
+
+                modifiedQuestion.answer - 1,
+                0,
+                showQuestions.correct_answer
+            );
+
+            possibleAnswers.forEach((option, index) => {
+                modifiedQuestion['option' + (index + 1)] = option;
+            });
+            return modifiedQuestion;
+        });
+
+        startGame();
+
+    })
+    .catch((err) => {
+        console.error(err);
+    });
+
+
+
+function startGame() {
+    questionBank = 0;
+    points = 0;
+    numberQuestions = [...addquestions];
+    getNewQuestion();
+};
+
+const MAX_QUESTIONS = 20;
+
+function getNewQuestion() {
+    if (numberQuestions.length === 0 || questionBank >= MAX_QUESTIONS) {
+        localStorage.setItem('mostRecentpoints', points);
+        return window.location.assign('/game.html');
     }
-    puzzle.innerHTML = 'No.' + (i + 1) + ' ' + questionContainer[i].puzzle;
-    choice0.innerHTML = questionContainer[i].choice[0];
-    choice1.innerHTML = questionContainer[i].choice[1];
-    choice2.innerHTML = questionContainer[i].choice[2];
-    choice3.innerHTML = questionContainer[i].choice[3];
 }
-
-function calcScore(e) {
-    if (e.innerHTML === questionContainer[i].answer && score < questionContainer.length) {
-        score = score + 1;
-        document.getElementById(e.id).style.background = 'green';
-    } else {
-        document.getElementById(e.id).style.background = 'red';
-    }
-}
-
-function nextPuzzle() {
-    if (i < questionContainer.length - 1) {
-        i = i + 1;
-        displayPuzzle();
-    } else {
-        score.innerHTML = score + '/' + questionContainer.length
-        puzzleContainer.style.display = 'none';
-    }
-}
-next.addEventListener('click', nextPuzzle);
-
-function backToQuiz() {
-    location.reload();
-}
-
-function checkAnswer() {
-    let answerContainer = document.getElementById('answer-container');
-    let answers = document.getElementById('answers');
-    answerContainer.style.display = 'block'
-    for (let a = 0; a < questionContainer.length; a++) {
-        let list = document.createElement('li');
-        list.innerHTML = questionContainer[a].answer;
-        answers.appendChild(list);
-    }
-}
-displayPuzzle();
+questionBank++;
