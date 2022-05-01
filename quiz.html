@@ -6,34 +6,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
-    <link rel="stylesheet" href="../assets/css/quiz.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/quiz.css">
+    <a href="/quiz.html"></a>
 
 </head>
 
-<body>
-    <header class="logo-img">
-        <a href="index.html">
-            <img src="../assets/images/logo.jpg" alt="quiz logo">
-        </a>
+<header class="logo-img">
+    <a href="index.html">
+        <img src="../assets/images/logo.jpg" alt="quiz logo">
+    </a>
+    <nav>
+        <ul class="menu">
+            <li>
+                <a href="help.html">Help</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+            <li>
+                <a class="new" href="new.html">New Game</a>
+            </li>
 
-    </header>
-    <h1 id="title" class="heading">Quiz Spel</h1>
-    <div id="puzzle-container">
-        <div class="puzzle">
-            <h2 id="puzzles"></h2>
-            <ol type="A">
-                <li class="choice"><span id="choice0" onclick="calcScore(this)"></span></li>
-                <li class="choice"><span id="choice1" onclick="calcScore(this)"></span></li>
-                <li class="choice"><span id="choice2" onclick="calcScore(this)"></span></li>
-                <li class="choice"><span id="choice3" onclick="calcScore(this)"></span></li>
-            </ol>
-            <h3 id="progress"></h3>
+        </ul>
+    </nav>
+</header>
+<h1 id="title" class="heading">QUIZ SPEL</h1>
+<div class="question-container">
+    <div id="game" class="game-center">
+        <h2 id="question">What is the capital of Russia?</h2>
+        <div class="option-box">
+            <p class="option-prefix">A</p>
+            <p class="option-text">Option0</p>
         </div>
-        <br>
-        <div class="btn">
-            <button type="button" class="next">Next</button>
+        <div class="option-box">
+            <p class="option-prefix">B</p>
+            <p class="option-text">Option1</p>
         </div>
+        <div class="option-box">
+            <p class="option-prefix">C</p>
+            <p class="option-text">Option2</p>
+        </div>
+        <div class="option-box">
+            <p class="option-prefix">D</p>
+            <p class="option-text">Option3</p>
+        </div>
+        <h3 id="progress"></h3>
     </div>
+    <br>
+    <div class="buttons">
+        <button type="button">Next</button>
+    </div>
+
+
 
     <div id="score-container" class="your-score">
         <h2 id="score-title">Your Score</h2>
@@ -48,6 +73,6 @@
     <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
 
     <script src="../assets/js/quiz.js"></script>
-</body>
+    </body>
 
 </html>
