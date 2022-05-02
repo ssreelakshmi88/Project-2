@@ -62,7 +62,7 @@ textarea.contact-form-control {
 
 label.contact-label {
     display: inline-block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .contact-credit {
@@ -183,4 +183,29 @@ input[type="button"].contact-btn-block {
 
         width: 100%;
     }
+
+
+
+
+    .contact-body {
+        max-width: 90%;
+    }
+
+    .contact-btn-block {
+        width: auto;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .contact-form-control {
+        width: 95%;
+    }
+
+    .contact-body {
+        line-height: 5;
+    }
+
+
+
 }

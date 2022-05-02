@@ -49,9 +49,21 @@ img,
 @media only screen and (max-width: 992px) {
 
     .help-container li {
-        line-height: 3;
+        line-height: 2;
         line-break: normal;
-        font-size: 2.5rem;
+        font-size: 1.5rem;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .help-container li {
+        line-height: 1.6;
+        line-break: normal;
+        font-size: 4rem;
 
     }
 
