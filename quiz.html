@@ -53,26 +53,31 @@
             <p class="option-prefix">D</p>
             <p class="option-text" id="choice-4" datatype="4">Option3</p>
         </div>
-        <h3 id="progress"></h3>
+        <h3 id="progress" class="progress"></h3>
+        <div id="status">
+            <div id="status-item">
+                <p id="progressText" class="status-prefix">
+                    Question
+                </p>
+                <div id="progressBar">
+                    <div id="progressBarFull"></div>
+                </div>
+            </div>
+        </div>
     </div>
-    <br>
-    <div class="buttons">
-        <button type="button" id="next">Next</button>
-    </div>
+</div>
+<br>
+<div class="buttons">
+    <button type="button" id="next">Next</button>
+</div>
 
-    <div id="score-board" class="your-score">
-        <h2 id="score-title">Your Score</h2>
-        <h2 id="score"></h2>
-        <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
-        <button type="button" id="check-answer" onclick="checkAnswer()">Check Answers</button>
-    </div>
-    <div id="answer-container" class="your-answers"></div>
-    <ol type="1" id="answers">
-
-    </ol>
+<div id="score-board" class="your-score">
+    <h2 id="score-title">Game over!! Your Score: </h2>
+    <h2 id="score"></h2>
     <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
-
-    <script src="../assets/js/quiz.js"></script>
-    </body>
+    <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
+</div>
+<script src="../assets/js/quiz.js"></script>
+</body>
 
 </html>

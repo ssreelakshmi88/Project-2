@@ -1,47 +1,41 @@
 const question = document.getElementById('question');
-
+const options = Array.from(document.getElementsByClassName('option-text'));
 let numberAnswers = false;
 let points = 0;
 let questionBank = 0;
-let formattedQuestions = [];
-let correctAnswers = [];
-let wrongAnswers = [];
 let currentQuestion = {};
 let numberQuestions = [];
 let addquestions = [];
 let questionsList = [];
 const MAX_QUESTIONS = 20;
 
-document.addEventListener("DOMContentLoaded", function () {
-    const options = document.getElementsByClassName('option-text');
 
-    for (let option of options) {
-        option.addEventListener("click", function () {
-            let answer = this.getAttribute("data-type");
-            checkAnswer(answer);
+let showQuestions = () => {
+    addquestions = showQuestions.results.map((showQuestions) => {
+        const modifiedQuestion = {
+            question: showQuestions.question,
+        };
+
+        const possibleAnswers = [...showQuestions.incorrect_answers];
+        modifiedQuestion.answer = Math.floor(Math.random() * 4) + 1;
+        possibleAnswers.splice(
+
+            modifiedQuestion.answer - 1,
+            0,
+            showQuestions.correct_answer
+        );
+
+        possibleAnswers.forEach((option, index) => {
+            modifiedQuestion['option' + (index + 1)] = option;
         });
-    }
-
-
-    //EventListener for next question
-
-    document.getElementById('next').addEventListener("click", function () {
-        enableButtons();
-
-        if (questionBank < 20) {
-            questionBank++;
-            showQuestion(questionBank);
-        } else {
-
-            showScoreBoard();
-        }
-
+        return modifiedQuestion;
     });
 
     startGame();
-});
 
+}
 
+// start game
 function startGame() {
     questionBank = 0;
     points = 0;
@@ -49,10 +43,11 @@ function startGame() {
     renderNewQuestion();
 };
 
+// render new question
 function renderNewQuestion() {
     if (numberQuestions.length === 0 || questionBank >= MAX_QUESTIONS) {
         localStorage.setItem('mostRecentpoints', points);
-        return window.location.assign('/game.html');
+        return window.location.assign('/quiz.html');
     }
     questionBank++;
 }
@@ -71,23 +66,3 @@ let preLoadedQuestions = () => {
 document.addEventListener('DOMContentLoaded', () => {
     preLoadedQuestions();
 });
-
-function showQuestion(questionBank) {
-
-    document.getElementById("question-game").innerText =
-
-        formattedQuestions[questionBank].question;
-}
-
-document.getElementById("choice-1").innerHTML =
-    formattedQuestions[questionBank].choice[0];
-document.getElementById("choice-2").innerHTML =
-    formattedQuestions[questionBank].choice[1];
-document.getElementById("choice-3").innerHTML =
-    formattedQuestions[questionBank].choice[2];
-document.getElementById("choice-4").innerHTML =
-    formattedQuestions[questionBank].choice[3];
-
-if (questionBank === 9) {
-    document.getElementById("next").innerHTML = "Get Result";
-}
