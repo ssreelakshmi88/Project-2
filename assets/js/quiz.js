@@ -47,7 +47,7 @@ function startGame() {
 function renderNewQuestion() {
     if (numberQuestions.length === 0 || questionBank >= MAX_QUESTIONS) {
         localStorage.setItem('mostRecentpoints', points);
-        return window.location.assign('/quiz.html');
+        return window.location.assign('/score.html');
     }
     questionBank++;
 }
