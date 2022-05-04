@@ -44,34 +44,36 @@
             <li class="option"><span id="option2" onclick="calcScore(this)"></span></li>
             <li class="option"><span id="option3" onclick="calcScore(this)"></span></li>
         </ol>
+    </div>
+    <div class="hud-item">
         <h4 id="progress" class="stat"></h4>
+        <div id="progressBar">
+            <div id="progressBarFull"></div>
+        </div>
+        <div class="buttons">
+            <button type="button" class="next">Next</button>
+        </div>
     </div>
 
-    <div class="buttons">
-        <button type="button" class="next">Next</button>
+    <!-- scoreboard section -->
+    <div id="scoreboard">
+
+        <h2 id="score-title">Your Score</h2>
+        <h2 id="score"></h2>
+        <button type="button" id="score-btn" onclick="playAgain()">Play Again</button>
+        <button type="button" id="check-answer" onclick="checkAnswer()">Check Answers</button>
     </div>
 
-</div>
+    <!-- answers section -->
+    <div id="answerBank">
+        <h2>Answers :</h2>
+        <ol type="1" id="answers">
 
-<!-- scoreboard section -->
-<div id="scoreboard">
+        </ol>
+        <button type="button" id="score-btn" onclick="playAgain()">Play Again</button>
+    </div>
 
-    <h2 id="score-title">Your Score</h2>
-    <h2 id="score"></h2>
-    <button type="button" id="score-btn" onclick="playAgain()">Play Again</button>
-    <button type="button" id="check-answer" onclick="checkAnswer()">Check Answers</button>
-</div>
-
-<!-- answers section -->
-<div id="answerBank">
-    <h2>Answers :</h2>
-    <ol type="1" id="answers">
-
-    </ol>
-    <button type="button" id="score-btn" onclick="playAgain()">Play Again</button>
-</div>
-
-<script src="../assets/js/quiz.js"></script>
-</body>
+    <script src="../assets/js/quiz.js"></script>
+    </body>
 
 </html>

@@ -11,7 +11,7 @@
      width: 80vw;
      padding: 2rem;
      border-radius: 4rem;
-
+     border: 1px solid black;
  }
 
 
@@ -29,11 +29,6 @@
      color: white;
  }
 
- ol {
-     position: relative;
-     padding: 0 1.5rem;
-
- }
 
  span {
      display: block;
@@ -45,12 +40,11 @@
      margin-top: 2.5rem;
  }
 
- .status {
+ .stat {
      margin-top: 1.5rem;
      color: rgb(6, 17, 168);
-     font-size: 3rem;
-     text-align: top;
-     top: 3px;
+     font-size: 2rem;
+     margin: 3rem
  }
 
  .buttons {
@@ -111,10 +105,7 @@
 
  /* Progress Bar */
 
- .progress {
-     display: flex;
-     justify-content: space-between;
- }
+
 
  .status-prefix {
 
@@ -128,10 +119,12 @@
      height: 6vh;
      border: 0.3rem solid #56a5eb;
      margin-top: 1.5rem;
+     margin: 3rem
  }
 
  #progressBarFull {
      height: 3.4rem;
      background-color: #56a5eb;
      width: 0%;
+     height: 6vh;
  }

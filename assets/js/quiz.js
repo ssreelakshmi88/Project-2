@@ -28,6 +28,8 @@ var questionBank = [{
 var question = document.getElementById('question');
 var quizBox = document.getElementById('quiz-box');
 var scorecard = document.getElementById('scorecard');
+let progressText = document.getElementById("progressText");
+let progressBarFull = document.getElementById("progressBarFull");
 var option0 = document.getElementById('option0');
 var option1 = document.getElementById('option1');
 var option2 = document.getElementById('option2');
@@ -49,6 +51,10 @@ function displayQuestion() {
     option2.innerHTML = questionBank[i].option[2];
     option3.innerHTML = questionBank[i].option[3];
     progress.innerHTML = "Question" + ' ' + (i + 1) + ' ' + 'of' + ' ' + questionBank.length;
+    progress.innerText = `Question ${i}/${questionBank.length}`;
+    // update progress bar
+    progressBarFull.style.width = `${(i / questionBank.length) * 100}%`;
+
 }
 
 //function to calculate scores
