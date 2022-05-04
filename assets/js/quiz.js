@@ -2,12 +2,16 @@ const question = document.getElementById('question');
 const options = Array.from(document.getElementsByClassName('option-text'));
 let numberAnswers = false;
 let points = 0;
-let questionBank = 0;
+let questionIndex = 0;
 let currentQuestion = {};
 let numberQuestions = [];
 let addquestions = [];
 let questionsList = [];
+
 const MAX_QUESTIONS = 20;
+
+
+
 
 
 let showQuestions = () => {
@@ -35,34 +39,66 @@ let showQuestions = () => {
 
 }
 
+function displayQuestions() {
+
+
+    question.textContent = questionsList[questionIndex];
+    //console.log(questionsList[questionIndex]);
+
+}
+
 // start game
 function startGame() {
-    questionBank = 0;
+    questionIndex = 0;
     points = 0;
-    numberQuestions = [...addquestions];
-    renderNewQuestion();
+    //numberQuestions = [...addquestions];
+    numberQuestions = questionsList.length;
+    console.log(questionsList);
+    //renderNewQuestion();
+    displayQuestions();
+
+
+
 };
 
 // render new question
 function renderNewQuestion() {
-    if (numberQuestions.length === 0 || questionBank >= MAX_QUESTIONS) {
+    if (numberQuestions.length === 0 || questionIndex >= MAX_QUESTIONS) {
         localStorage.setItem('mostRecentpoints', points);
-        return window.location.assign('/score.html');
+        return window.location.assign('/quiz-result.html');
     }
-    questionBank++;
+    questionIndex++;
 }
 
 // load question on DOM load
 let preLoadedQuestions = () => {
+
     fetch('https://opentdb.com/api.php?amount=20&category=9&difficulty=easy&type=multiple')
         .then((res) => {
             questionsList = res.json();
+            console.log(questionsList.results);
+
         })
         .catch((err) => {
             console.error(err);
         });
+
 }
 
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
+    //preLoadedQuestions();
+    //console.log(questionsList);
+
+
+
+});
+
+window.addEventListener('load', () => {
     preLoadedQuestions();
+    console.log(questionsList);
+    startGame();
+
 });

@@ -1,106 +1,124 @@
- .heading {
-     font-size: 2.3rem;
-     padding-top: 72px;
-     text-align: center;
- }
+.questions {
+    margin: 3rem auto;
+    width: 90vw;
+    padding: 2rem;
+    border-radius: 4rem;
+}
 
+#question {
+    margin-bottom: 1rem;
+}
 
- .option-box {
-     display: flex;
-     margin-bottom: 0.5rem;
-     width: 90%;
-     height: 9vh;
-     font-size: 1.8rem;
-     border: 0.1rem solid rgba(1, 8, 14, 0.25);
-     background-color: white;
-     text-decoration: none;
+.option {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    border-bottom: solid 0.1rem blue;
+    width: 15rem;
+    background: lightblue;
+    border-radius: 1rem;
+}
 
- }
+.option:hover {
+    color: white;
+}
 
- .option-box:hover {
+ol {
+    position: relative;
+    padding: 0 1.5rem;
+    color: rgb(1, 73, 73);
+}
 
-     font-size: 1 rem;
-     border: 0.1rem solid rgb(86, 165, 235, 0.25);
-     background-color: white;
+span {
+    display: block;
+    padding: 0.1rem 0.7rem;
+    border-radius: 1rem;
+}
 
- }
+#answer {
+    margin-top: 2.5rem;
+}
 
- .option-prefix {
-     padding-bottom: 53px;
-     font-size: 1.4rem;
-     background-color: rgb(94, 94, 209);
-     color: white;
-     margin-top: 0rem;
-     margin-bottom: 2rem;
-     width: 4vw;
-     text-align: center;
-     text-indent: 5px;
- }
+#stat {
+    margin-top: 1.5rem;
+    color: rgb(6, 17, 168);
+}
 
+.buttons {
+    text-align: center;
+}
 
+button {
+    padding: 0.2rem 1.5rem;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+    color: rgba(93, 53, 156, 0.98);
+    background: rgba(161, 177, 19, 0.82);
+}
 
- .option-text {
+button:active {
+    background: lavender;
+}
 
-     padding: 24px;
-     padding-top: 2px;
-     font-size: 1.4rem;
-     margin-left: 5px;
-     margin-top: 1rem;
- }
+#scoreboard,
+#answerBank {
+    width: 20rem;
+    background: rgba(230, 230, 250, 0.77);
+    padding: 2rem;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 5rem;
+    display: none;
+}
 
- .button {
+#score-title {
+    margin: 1rem 0;
+}
 
-     text-align: right;
+#score-btn,
+#check-answer {
+    margin-top: 1rem;
+}
 
- }
+#score {
+    font-size: 2.5rem;
+}
 
+#answerBank li {
+    text-align: left;
+    margin-bottom: 0.2rem;
+    font-size: larger;
+}
 
- button {
-     border: none;
-     padding: 3.2px 24px;
-     outline: none;
-     font-size: 1.5rem;
-     color: #ffff;
-     background-color: rgb(94, 94, 209);
+#answers {
+    margin-top: 1rem;
+}
 
- }
+/* Progress Bar */
 
+.progress {
+    display: flex;
+    justify-content: space-between;
+}
 
- .your-score,
- .your-answers {
+.status-prefix {
 
-     width: 50vw;
-     height: 40vh;
-     text-align: center;
-     padding-top: 28px;
-     margin: 1 rem auto;
+    font-size: 1rem;
 
+}
 
- }
+#progressBar {
+    text-align: center;
+    width: 11rem;
+    height: 6vh;
+    border: 0.3rem solid #56a5eb;
+    margin-top: 1.5rem;
+}
 
- /* Progress Bar */
-
- .progress {
-     display: flex;
-     justify-content: space-between;
- }
-
- .status-prefix {
-
-     font-size: 1rem;
-
- }
-
- #progressBar {
-     text-align: center;
-     width: 11rem;
-     height: 6vh;
-     border: 0.3rem solid #56a5eb;
-     margin-top: 1.5rem;
- }
-
- #progressBarFull {
-     height: 3.4rem;
-     background-color: #56a5eb;
-     width: 0%;
- }
+#progressBarFull {
+    height: 3.4rem;
+    background-color: #56a5eb;
+    width: 0%;
+}
