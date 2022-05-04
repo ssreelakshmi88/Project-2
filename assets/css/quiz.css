@@ -68,10 +68,10 @@
      background: lavender;
  }
 
- #scoreboard,
- #answerBank {
-     width: 20rem;
-     background: rgba(230, 230, 250, 0.77);
+ .score-section,
+ .answerbank {
+     width: 50rem;
+     background: rgba(174, 174, 242, 0.77);
      padding: 2rem;
      text-align: center;
      margin: auto;
@@ -80,7 +80,7 @@
      display: none;
  }
 
- #score-title {
+ .score-title {
      margin: 1rem 0;
  }
 
@@ -93,13 +93,13 @@
      font-size: 2.5rem;
  }
 
- #answerBank li {
+ .answerbank li {
      text-align: left;
      margin-bottom: 0.2rem;
      font-size: larger;
  }
 
- #answers {
+ .answers {
      margin-top: 1rem;
  }
 
