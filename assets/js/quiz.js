@@ -69,7 +69,7 @@ function nextQuestion() {
         displayQuestion();
     } else {
         points.innerHTML = score + '/' + questionBank.length;
-        quizContainer.style.display = 'none';
+        quizBox.style.display = 'none';
         scoreboard.style.display = 'block'
     }
 }
@@ -77,8 +77,8 @@ function nextQuestion() {
 //click events to next button
 next.addEventListener('click', nextQuestion);
 
-//Back to Quiz button event
-function backToQuiz() {
+//Play Again
+function playAgain() {
     location.reload();
 }
 
@@ -97,3 +97,5 @@ function checkAnswer() {
 
 
 displayQuestion();
+calcScore(e);
+checkAnswer();
