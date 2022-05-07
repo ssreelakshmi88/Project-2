@@ -104,15 +104,16 @@ function makeCorrectAnswerList() {
         var list = document.createElement('li');
         list.innerHTML = questionBank[a]['correct_answer'];
         if (ansChoice[a]) {
-            list.style.backgroundColor = 'limegreen';
+            list.style.backgroundColor = 'green';
         } else {
 
-            list.style.backgroundColor = 'tomato';
+            list.style.backgroundColor = 'red';
         }
 
         answers.appendChild(list);
     }
 }
+
 
 // load question on DOM load
 let questionBank = []
