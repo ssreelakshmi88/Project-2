@@ -63,17 +63,27 @@ function playAgain() {
 }
 
 //function to check Answers
-function checkAnswer() {
+function makeCorrectAnswerList() {
     var answerBank = document.getElementById('answerBank');
     var answers = document.getElementById('answers');
     answerBank.style.display = 'block';
     scoreboard.style.display = 'none';
     for (var a = 0; a < questionBank.length; a++) {
         var list = document.createElement('li');
-        list.innerHTML = questionBank[a].answer;
+        list.innerHTML = questionBank[a]['correct_answer'];
+        if (ansChoice[a]) {
+            list.style.backgroundColor = 'green';
+        } else {
+
+            list.style.backgroundColor = 'red';
+        }
+
         answers.appendChild(list);
     }
 }
+
+
+
 
 
 
