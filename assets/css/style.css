@@ -48,11 +48,12 @@ img {
     list-style-type: none;
     margin-right: 30px;
 
+
 }
 
 img,
 .menu {
-    line-height: 75px;
+    line-height: 5px;
 }
 
 h1 {
@@ -131,6 +132,66 @@ p {
 }
 
 
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    .menu li {
+
+
+        padding-left: 0;
+        margin: 3.2%;
+        font-size: 4vmin;
+    }
+
+    .btn {
+
+        font-size: 3rem;
+
+    }
+
+
+
+    h1 {
+        font-size: 5rem;
+        text-align: center;
+    }
+
+    .container {
+        width: 90vw;
+        height: 84vh;
+        padding-top: 7px;
+    }
+
+
+
+}
+
+
+
+
+
+
+/*Media query for screens of 1200px and down*/
+@media screen and (max-width: 1200px) {
+
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        width: 90vw;
+        height: 84vh;
+        padding-top: 7px;
+    }
+
+
+
+}
+
+
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
@@ -157,7 +218,7 @@ p {
 
 
     h1 {
-        font-size: 2rem;
+        font-size: 1rem;
         padding-left: 46px;
         text-align: center;
     }
@@ -177,41 +238,6 @@ p {
 
 }
 
-@media screen and (max-width: 400px) {
-    .menu li {
-
-        padding-left: 0;
-        margin: 3.2%;
-        font-size: 3.5vmin;
-        letter-spacing: 2px;
-
-    }
-
-    .container {
-        width: 60vw;
-        height: 60vh;
-        padding-top: 15px;
-    }
-
-    h1 {
-        font-size: 2rem;
-        padding-left: 28px;
-    }
-
-    .btn {
-
-        width: 7rem;
-        text-align: justify;
-        margin-left: 35px;
-    }
-
-    p {
-        font-size: 1.8rem;
-        margin-bottom: 10px;
-        margin-left: 31px;
-    }
-
-}
 
 @media screen and (max-width: 768px) {
 
@@ -232,4 +258,41 @@ p {
         width: 15rem;
         margin-left: 35px;
     }
+}
+
+
+@media screen and (max-width: 414px) {
+    .menu li {
+
+        padding-left: 0;
+        margin: 3.2%;
+        font-size: 3.5vmin;
+        letter-spacing: 2px;
+
+    }
+
+    .container {
+        width: 66vw;
+        height: 61vh;
+        padding-top: 15px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        padding-left: 28px;
+    }
+
+    .btn {
+
+        width: 7rem;
+        text-align: justify;
+        margin-left: 35px;
+    }
+
+    p {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        margin-left: 31px;
+    }
+
 }

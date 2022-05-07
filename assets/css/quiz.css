@@ -1,8 +1,23 @@
  h1 {
 
      text-align: center;
+     padding-top: 55px;
+     padding-right: 65px;
+ }
 
-     padding-top: 50px;
+ .menu li {
+
+
+     padding-left: 0;
+     margin: 3%;
+     font-size: 3.5vmin;
+ }
+
+
+
+ .heading {
+     font-size: 3rem;
+
  }
 
 
@@ -131,4 +146,42 @@
  }
 
  /* Extra small devices (phones, 600px and down) */
- @media only screen and (max-width: 600px) {}
+ @media only screen and (max-width: 600px) {
+
+
+     .questions {
+
+
+         height: 69vw;
+     }
+
+     .option {
+         width: 100%;
+         margin-bottom: 10px;
+         height: 9vw;
+     }
+ }
+
+ @media screen and (max-width: 768px) {
+
+
+     h1 {
+
+         padding-top: 100px;
+
+     }
+
+
+
+     .questions {
+
+
+         height: 69vw;
+     }
+
+     .option {
+         width: 100%;
+         margin-bottom: 10px;
+         height: 8vw;
+     }
+ }
