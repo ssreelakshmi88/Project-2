@@ -23,18 +23,22 @@ function displayQuestion() {
         span[x].style.background = 'none';
     }
     question.innerHTML = 'No.' + (i + 1) + ' ' + questionBank[i].question;
+    //generate array of random integers from 0 to 3
+    var ranArray = getRandomInt(optionList.length - 1);
+    var answers = [questionBank[i].correct_answer].concat(questionBank[i].incorrect_answers);
+    console.log(answers);
 
-    option0.innerHTML = questionBank[i].incorrect_answers[0];
-    option1.innerHTML = questionBank[i].incorrect_answers[1];
-    option2.innerHTML = questionBank[i].incorrect_answers[2];
-    option3.innerHTML = questionBank[i].incorrect_answers[3];
+    //loop to fill options with random answers
+    for (index = 0; index < optionList.length; index++) {
+        optionList[index].innerHTML = answers[ranArray[index]];
+
+    }
     // Progress bar text updation
     progress.innerHTML = "Question" + ' ' + (i + 1) + ' ' + 'of' + ' ' + questionBank.length;
     progress.innerText = `Question ${i}/${questionBank.length}`;
     progressBarFull.style.width = `${(i / questionBank.length) * 100}%`;
 
 }
-
 //create an array of integers [start..end] in ascending order
 function range(start, end) {
     return Array(end - start + 1).fill().map((_, idx) => start + idx)
@@ -56,11 +60,16 @@ function getRandomInt(max) {
 
 //function to calculate scores
 function calcScore(e) {
-    if (e.innerHTML === questionBank[i].answer && score < questionBank.length) {
+    console.log(`E: ${e}`);
+    console.log(`E CONTENTS: ${e.innerHTML}`);
+    console.log(`QUESTION: ${questionBank[i]['correct_answer']}`);
+    if (e.innerHTML === questionBank[i]['correct_answer'] && score < questionBank.length) {
         score = score + 1;
         document.getElementById(e.id).style.background = 'green';
+        ansChoice.push(true);
     } else {
         document.getElementById(e.id).style.background = 'red';
+        ansChoice.push(false);
     }
     setTimeout(nextQuestion, 300);
 }
@@ -95,10 +104,10 @@ function makeCorrectAnswerList() {
         var list = document.createElement('li');
         list.innerHTML = questionBank[a]['correct_answer'];
         if (ansChoice[a]) {
-            list.style.backgroundColor = 'green';
+            list.style.backgroundColor = 'limegreen';
         } else {
 
-            list.style.backgroundColor = 'red';
+            list.style.backgroundColor = 'tomato';
         }
 
         answers.appendChild(list);
