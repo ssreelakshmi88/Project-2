@@ -19,14 +19,14 @@
      margin-bottom: 1.0rem;
      font-size: 1.2rem;
      border-bottom: solid 0.1rem black;
-     width: 20rem;
+     width: 32rem;
      height: 4vh;
      background: skyblue;
      border-radius: 1rem;
  }
 
  .option:hover {
-     color: white;
+     color: blueviolet;
  }
 
 
@@ -70,7 +70,7 @@
 
  .score-section,
  .answerbank {
-     width: 50rem;
+     width: 25rem;
      background: rgba(174, 174, 242, 0.77);
      padding: 2rem;
      text-align: center;
@@ -78,6 +78,7 @@
      position: relative;
      top: 5rem;
      display: none;
+     height: 120vh;
  }
 
  .score-title {

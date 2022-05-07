@@ -22,7 +22,7 @@ function displayQuestion() {
     for (var x = 0; x < span.length; x++) {
         span[x].style.background = 'none';
     }
-    question.innerHTML = 'No.' + (i + 1) + ' ' + questionBank[i].question;
+    question.innerHTML = '#' + (i + 1) + ' ' + questionBank[i].question;
     //generate array of random integers from 0 to 3
     var ranArray = getRandomInt(optionList.length - 1);
     var answers = [questionBank[i].correct_answer].concat(questionBank[i].incorrect_answers);
@@ -113,7 +113,6 @@ function makeCorrectAnswerList() {
         answers.appendChild(list);
     }
 }
-
 
 // load question on DOM load
 let questionBank = []
