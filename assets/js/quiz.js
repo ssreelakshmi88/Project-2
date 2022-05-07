@@ -8,11 +8,14 @@ let option0 = document.getElementById('option0');
 let option1 = document.getElementById('option1');
 let option2 = document.getElementById('option2');
 let option3 = document.getElementById('option3');
+let optionList = [option0, option1, option2, option3];
 let next = document.querySelector('.next');
 let points = document.getElementById('score');
 let span = document.querySelectorAll('span');
 let i = 0;
 let score = 0;
+let ansChoice = [];
+
 
 //function to display questions
 function displayQuestion() {
@@ -20,15 +23,35 @@ function displayQuestion() {
         span[x].style.background = 'none';
     }
     question.innerHTML = 'No.' + (i + 1) + ' ' + questionBank[i].question;
+
     option0.innerHTML = questionBank[i].incorrect_answers[0];
     option1.innerHTML = questionBank[i].incorrect_answers[1];
     option2.innerHTML = questionBank[i].incorrect_answers[2];
-    //option3.innerHTML = questionBank[i].incorrect_answers[3];
+    option3.innerHTML = questionBank[i].incorrect_answers[3];
+    // Progress bar text updation
     progress.innerHTML = "Question" + ' ' + (i + 1) + ' ' + 'of' + ' ' + questionBank.length;
     progress.innerText = `Question ${i}/${questionBank.length}`;
-    // update progress bar
     progressBarFull.style.width = `${(i / questionBank.length) * 100}%`;
 
+}
+
+//create an array of integers [start..end] in ascending order
+function range(start, end) {
+    return Array(end - start + 1).fill().map((_, idx) => start + idx)
+}
+//generate array of random non-repetetive integers from 0 to max
+function getRandomInt(max) {
+    var nums = range(0, max),
+        ranNums = [],
+        idx = nums.length,
+        j = 0;
+    while (idx--) {
+        j = Math.floor(Math.random() * (idx + 1));
+        ranNums.push(nums[j]);
+        nums.splice(j, 1);
+    }
+    console.log(ranNums);
+    return ranNums;
 }
 
 //function to calculate scores
@@ -83,10 +106,6 @@ function makeCorrectAnswerList() {
 }
 
 
-
-
-
-
 // load question on DOM load
 let questionBank = []
 let preLoadedQuestions = async () => {
@@ -102,7 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
     preLoadedQuestions().then(() => {
         console.log(questionBank);
         displayQuestion();
-        calcScore(e);
-        checkAnswer();
+
     });
 });
