@@ -59,7 +59,7 @@
      margin-top: 1.5rem;
      color: rgb(6, 17, 168);
      font-size: 2rem;
-     margin-left: 60px;
+     margin-left: 3rem;
  }
 
 
@@ -74,6 +74,10 @@
      background: blue;
      margin-bottom: 50rem;
      margin-left: 300px;
+ }
+
+ .next {
+     margin-bottom: 18px;
  }
 
 
@@ -157,6 +161,9 @@
      height: 6vh;
  }
 
+
+
+
  /* Extra small devices (phones, 600px and down) */
  @media only screen and (max-width: 600px) {
 
@@ -175,19 +182,12 @@
  }
 
  @media screen and (max-width: 768px) {
-
-
      h1 {
-
-         padding-top: 100px;
+         padding-top: 120px;
 
      }
 
-
-
      .questions {
-
-
          height: 69vw;
      }
 
@@ -196,4 +196,53 @@
          margin-bottom: 10px;
          height: 8vw;
      }
+ }
+
+ @media screen and (max-width: 414px) {
+
+     .menu li {
+
+         padding-left: 4px;
+         margin: 3.2%;
+         font-size: 3.5vmin;
+         letter-spacing: 4px;
+
+     }
+
+     .questions {
+         height: 84vw;
+         width: auto;
+     }
+
+     .option {
+
+         height: 10vw;
+
+     }
+
+     button {
+
+         margin-left: 60px;
+     }
+
+     .stat {
+         margin-top: auto;
+     }
+
+     .status-item {
+         display: grid;
+
+         width: 60vw;
+         height: 70vw;
+
+     }
+
+     .progress-div {
+         display: grid;
+         width: 82vw;
+         height: 70vw;
+
+
+     }
+
  }
