@@ -59,15 +59,13 @@
      margin-top: 1.5rem;
      color: rgb(6, 17, 168);
      font-size: 2rem;
-     margin: 3rem
+     margin-left: 60px;
  }
 
- .buttons {
-     text-align: center;
- }
+
 
  button {
-     padding: 0.2rem 1.5rem;
+     padding: 0.2rem 6rem;
      border: none;
      outline: none;
      font-size: 1.5rem;
@@ -75,7 +73,7 @@
      color: white;
      background: blue;
      margin-bottom: 50rem;
-     text-align: right;
+     margin-left: 300px;
  }
 
 
@@ -121,6 +119,21 @@
 
  /* Progress Bar */
 
+ .status-item {
+
+     display: flex;
+     justify-content: flex-start;
+     height: fit-content;
+     align-items: baseline;
+     line-height: normal;
+ }
+
+ .progress-div {
+     display: flex;
+     align-items: flex-start;
+     justify-content: space-around;
+     flex-direction: column;
+ }
 
 
  .status-prefix {
@@ -134,8 +147,7 @@
      width: 11rem;
      height: 6vh;
      border: 0.3rem solid #56a5eb;
-     margin-top: 1.5rem;
-     margin: 3rem
+     margin-left: 3rem;
  }
 
  #progressBarFull {
