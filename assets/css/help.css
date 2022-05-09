@@ -4,19 +4,21 @@ img {
 
 img,
 .menu {
-    line-height: 30px;
+    line-height: 20px;
 }
 
 
 .help-container h1 {
     margin-bottom: 25px;
     padding-top: 80px;
+    font-size: small;
     text-align: center;
 }
 
 .help-container li {
     line-height: 1.6;
     line-break: normal;
+    font-size: 1.5rem;
 }
 
 .btn-start {
@@ -31,41 +33,24 @@ img,
     color: green;
 }
 
-@media only screen and (device-width : 375px) and (device-height : 812px) and (-webkit-device-pixel-ratio : 3) {
 
-    .help-container li {
-        line-height: 1.6;
-        line-break: normal;
-        font-size: 1.5rem;
-    }
-
-
-    .btn-start {
-        font-size: 1.5rem;
-    }
-
-}
-
-@media only screen and (max-width: 992px) {
-
-    .help-container li {
-        line-height: 2;
-        line-break: normal;
-        font-size: 1.5rem;
-
-    }
-
-
-}
 
 @media only screen and (max-width: 1200px) {
 
     .help-container li {
         line-height: 1.6;
         line-break: normal;
-        font-size: 4rem;
+        font-size: 1.5rem;
 
     }
+}
 
+@media screen and (max-width: 414px) {
+
+    .btn-start {
+
+        font-size: 3rem;
+
+    }
 
 }
