@@ -94,6 +94,33 @@ function playAgain() {
     location.reload();
 }
 
+//create table in html using 2Darray tableData
+function createTable(tableData, boundingElement) {
+    var table = document.createElement('table');
+    var tableBody = document.createElement('tbody');
+
+    table.style.width = "90vw";
+    table.style.border = "3px solid #000"
+    table.style.borderWidth = "3px";
+    table.style.borderColor = "#000";
+    table.style.borderStyle = "solid";
+
+    tableData.forEach(function (rowData) {
+        var row = document.createElement('tr');
+        row.style.border = "3px solid #000"
+        rowData.forEach(function (cellData) {
+            var cell = document.createElement('td');
+            cell.style.border = "3px solid #000"
+            cell.appendChild(document.createTextNode(cellData));
+            row.appendChild(cell);
+        });
+        tableBody.appendChild(row);
+    });
+
+    table.appendChild(tableBody);
+    boundingElement.appendChild(table);
+}
+
 //function to check Answers
 function makeCorrectAnswerList() {
     var answerBank = document.getElementById('answerBank');
