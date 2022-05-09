@@ -15,6 +15,7 @@ let span = document.querySelectorAll('span');
 let i = 0;
 let score = 0;
 let ansChoice = [];
+let timerSpan = document.getElementById("timer");
 
 
 //function to display questions
@@ -70,9 +71,13 @@ function calcScore(e) {
     } else {
         document.getElementById(e.id).style.background = 'red';
         ansChoice.push(false);
+
     }
     setTimeout(nextQuestion, 300);
+
 }
+
+
 
 //function to display next question
 function nextQuestion() {
@@ -84,6 +89,7 @@ function nextQuestion() {
         quizBox.style.display = 'none';
         scoreboard.style.display = 'block'
     }
+
 }
 
 //click events to next button
@@ -93,13 +99,12 @@ next.addEventListener('click', nextQuestion);
 function playAgain() {
     location.reload();
 }
-
 //create table in html using 2Darray tableData
 function createTable(tableData, boundingElement) {
     var table = document.createElement('table');
     var tableBody = document.createElement('tbody');
 
-    table.style.width = "90vw";
+    table.style.width = "80vw";
     table.style.border = "3px solid #000"
     table.style.borderWidth = "3px";
     table.style.borderColor = "#000";
@@ -114,6 +119,7 @@ function createTable(tableData, boundingElement) {
             cell.appendChild(document.createTextNode(cellData));
             row.appendChild(cell);
         });
+
         tableBody.appendChild(row);
     });
 
@@ -121,26 +127,23 @@ function createTable(tableData, boundingElement) {
     boundingElement.appendChild(table);
 }
 
+
 //function to check Answers
 function makeCorrectAnswerList() {
     var answerBank = document.getElementById('answerBank');
     var answers = document.getElementById('answers');
     answerBank.style.display = 'block';
     scoreboard.style.display = 'none';
+    var tableData = [];
+
     for (var a = 0; a < questionBank.length; a++) {
-        var list = document.createElement('li');
-        list.innerHTML = questionBank[a]['correct_answer'];
-        if (ansChoice[a]) {
-            list.style.backgroundColor = 'green';
-        } else {
 
-            list.style.backgroundColor = 'red';
-        }
+        tableData.push([questionBank[a]['question'], questionBank[a]['correct_answer'], ansChoice[a] == true ? ' Correct ' : ' Incorrect '])
 
-        answers.appendChild(list);
     }
-}
+    createTable(tableData, answers);
 
+}
 
 // load question on DOM load
 let questionBank = []
