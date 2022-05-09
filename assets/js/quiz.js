@@ -104,7 +104,7 @@ function createTable(tableData, boundingElement) {
     var table = document.createElement('table');
     var tableBody = document.createElement('tbody');
 
-    table.style.width = "50vw";
+    //table.style.width = "50vw";
     table.style.border = "3px solid #000"
     table.style.borderWidth = "3px";
     table.style.borderColor = "#000";

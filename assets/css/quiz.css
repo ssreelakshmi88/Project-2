@@ -92,19 +92,19 @@
 
  .score-section,
  .answerbank {
-     width: 75rem;
-     background: #d4d1da;
+     width: 43rem;
+     background: lightskyblue;
      padding: 2rem;
      text-align: center;
      margin: auto;
      position: relative;
      top: 5rem;
      display: none;
-     height: 200vh;
+     height: 278vh;
  }
 
  table {
-     width: 60vw;
+     width: 100%;
      border-collapse: collapse;
 
  }
@@ -122,6 +122,8 @@
  #score-btn,
  #check-answer {
      margin-top: 1rem;
+     padding: 0.20000000000000284rem 1rem;
+     margin-left: 21px;
  }
 
  #score {
@@ -228,7 +230,7 @@
      }
 
      .questions {
-         height: 69vw;
+         height: 78vw;
      }
 
      .option {
@@ -239,7 +241,7 @@
 
      .next {
 
-         margin-left: 100px;
+         margin-left: 92px;
      }
 
      .stat {
@@ -250,6 +252,14 @@
      #progressBar {
 
          margin-left: 5rem;
+     }
+
+     #score-btn,
+     #check-answer {
+         margin-top: 1rem;
+         padding: 0.20000000000000284rem 1rem;
+         margin-bottom: 2rem;
+         margin-left: 25px;
      }
  }
 
@@ -265,7 +275,7 @@
      }
 
      .questions {
-         height: 100vw;
+         height: 110vw;
          width: auto;
      }
 
@@ -306,4 +316,16 @@
 
      }
 
+     .score-section,
+     .answerbank {
+
+         width: 24rem;
+
+
+     }
+
+     #score-btn,
+     #check-answer {
+         margin-left: 19px;
+     }
  }
