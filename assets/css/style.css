@@ -19,8 +19,8 @@ img {
     float: left;
     height: 5rem;
     border-radius: 100%;
-    right: 10px;
-    position: relative;
+    right: -16px;
+
 }
 
 .menu {

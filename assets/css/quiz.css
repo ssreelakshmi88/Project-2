@@ -21,7 +21,10 @@
  }
 
 
+
+
  .questions {
+
      margin: 3rem auto;
      width: 80vw;
      padding: 2rem;
@@ -59,7 +62,7 @@
      margin-top: 1.5rem;
      color: rgb(6, 17, 168);
      font-size: 2rem;
-     margin-left: 3rem;
+     margin-left: 15rem;
  }
 
 
@@ -78,6 +81,8 @@
 
  .next {
      margin-bottom: 18px;
+     color: white;
+     margin-left: 205px;
  }
 
 
@@ -87,20 +92,21 @@
 
  .score-section,
  .answerbank {
-     width: 81rem;
-     background: #f5f5f5;
+     width: 75rem;
+     background: #d4d1da;
      padding: 2rem;
      text-align: center;
      margin: auto;
      position: relative;
      top: 5rem;
      display: none;
-     height: 150vh;
+     height: 200vh;
  }
 
  table {
+     width: 60vw;
      border-collapse: collapse;
-     width: 100%;
+
  }
 
  td {
@@ -122,11 +128,7 @@
      font-size: 2.5rem;
  }
 
- .answerbank li {
-     text-align: left;
-     margin-bottom: 0.2rem;
-     font-size: larger;
- }
+
 
  .answers {
      margin-top: 1rem;
@@ -139,7 +141,7 @@
      display: flex;
      justify-content: flex-start;
      height: fit-content;
-     align-items: baseline;
+     align-items: end;
      line-height: normal;
  }
 
@@ -162,11 +164,11 @@
      width: 11rem;
      height: 6vh;
      border: 0.3rem solid #56a5eb;
-     margin-left: 3rem;
+     margin-left: 15rem;
  }
 
  #progressBarFull {
-     height: 3.4rem;
+
      background-color: #56a5eb;
      width: 0%;
      height: 6vh;
@@ -174,6 +176,33 @@
 
 
 
+
+ /*Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+
+
+     .menu li {
+
+         margin: 2%;
+     }
+ }
+
+
+ /*Media query for screens of 1200px and down*/
+ @media screen and (max-width: 1200px) {
+
+     .menu li {
+
+         margin: 2%;
+
+     }
+
+     .questions {
+         width: 70vw;
+
+     }
+
+ }
 
  /* Extra small devices (phones, 600px and down) */
  @media only screen and (max-width: 600px) {
@@ -207,6 +236,21 @@
          margin-bottom: 10px;
          height: 8vw;
      }
+
+     .next {
+
+         margin-left: 100px;
+     }
+
+     .stat {
+         margin-top: auto;
+         margin-left: 5rem;
+     }
+
+     #progressBar {
+
+         margin-left: 5rem;
+     }
  }
 
  @media screen and (max-width: 414px) {
@@ -221,23 +265,29 @@
      }
 
      .questions {
-         height: 84vw;
+         height: 100vw;
          width: auto;
      }
 
      .option {
 
-         height: 10vw;
+         height: 15vw;
 
      }
 
-     button {
+     .next {
 
-         margin-left: 60px;
+         margin-left: 92px;
      }
 
      .stat {
          margin-top: auto;
+         margin-left: 5rem;
+     }
+
+     #progressBar {
+
+         margin-left: 5rem;
      }
 
      .status-item {
