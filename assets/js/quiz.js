@@ -1,3 +1,5 @@
+/*jshint esversion: 8 */
+
 let question = document.getElementById('question');
 let quizBox = document.getElementById('quiz-box');
 let scorecard = document.getElementById('scorecard');
@@ -20,9 +22,8 @@ let timerSpan = document.getElementById("timer");
 
 //function to display questions
 function displayQuestion() {
-    for (var x = 0; x < span.length; x++) {
-        span[x].style.background = 'none';
-    }
+    resetBackGround();
+
     question.innerHTML = '#' + (i + 1) + ' ' + questionBank[i].question;
     //generate array of random integers from 0 to 3
     var ranArray = getRandomInt(optionList.length - 1);
@@ -40,10 +41,18 @@ function displayQuestion() {
     progressBarFull.style.width = `${(i / questionBank.length) * 100}%`;
 
 }
+
+function resetBackGround() {
+    for (var x = 0; x < span.length; x++) {
+        span[x].style.background = 'none';
+    }
+}
+
 //create an array of integers [start..end] in ascending order
 function range(start, end) {
     return Array(end - start + 1).fill().map((_, idx) => start + idx)
 }
+
 //generate array of random non-repetetive integers from 0 to max
 function getRandomInt(max) {
     var nums = range(0, max),
@@ -61,10 +70,7 @@ function getRandomInt(max) {
 
 //function to calculate scores
 function calcScore(e) {
-    console.log(`E: ${e}`);
-    console.log(`E CONTENTS: ${e.innerHTML}`);
-    console.log(`QUESTION: ${questionBank[i]['correct_answer']}`);
-    if (e.innerHTML === questionBank[i]['correct_answer'] && score < questionBank.length) {
+    if (isValidAndAcceptableScore(e)) {
         score = score + 1;
         document.getElementById(e.id).style.background = 'green';
         ansChoice.push(true);
@@ -78,6 +84,10 @@ function calcScore(e) {
 }
 
 
+
+function isValidAndAcceptableScore(e) {
+    return e.innerHTML === questionBank[i]['correct_answer'] && score < questionBank.length;
+}
 
 //function to display next question
 function nextQuestion() {
@@ -105,7 +115,7 @@ function createTable(tableData, boundingElement) {
     var tableBody = document.createElement('tbody');
 
     //table.style.width = "50vw";
-    table.style.border = "3px solid #000"
+    table.style.border = "3px solid #000";
     table.style.borderWidth = "3px";
     table.style.borderColor = "#000";
     table.style.borderStyle = "solid";
@@ -146,7 +156,7 @@ function makeCorrectAnswerList() {
 }
 
 // load question on DOM load
-let questionBank = []
+let questionBank = [];
 let preLoadedQuestions = async () => {
     questionBank = await fetch('https://opentdb.com/api.php?amount=20&category=9&difficulty=medium&type=multiple')
         .then((response) => response.json())
@@ -156,6 +166,22 @@ let preLoadedQuestions = async () => {
         });
 
 }
+
+// bind calcScore to options
+function bindCalScoreToOptions() {
+    Array.from(options).forEach((element) => {
+        element.addEventListener('click', calcScore(this));
+    })
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    preLoadedQuestions().then(() => {
+        console.log(questionBank);
+        displayQuestion();
+        bindCalScoreToOptions();
+    });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     preLoadedQuestions().then(() => {
         console.log(questionBank);
