@@ -10,6 +10,7 @@ let option0 = document.getElementById('option0');
 let option1 = document.getElementById('option1');
 let option2 = document.getElementById('option2');
 let option3 = document.getElementById('option3');
+let options = document.getElementsByClassName('option');
 let optionList = [option0, option1, option2, option3];
 let next = document.querySelector('.next');
 let points = document.getElementById('score');
@@ -50,7 +51,7 @@ function resetBackGround() {
 
 //create an array of integers [start..end] in ascending order
 function range(start, end) {
-    return Array(end - start + 1).fill().map((_, idx) => start + idx)
+    return Array(end - start + 1).fill().map((_, idx) => start + idx);
 }
 
 //generate array of random non-repetetive integers from 0 to max
@@ -86,7 +87,7 @@ function calcScore(e) {
 
 
 function isValidAndAcceptableScore(e) {
-    return e.innerHTML === questionBank[i]['correct_answer'] && score < questionBank.length;
+    return e.innerHTML === questionBank[i]['correct.answer'] && score < questionBank.length;
 }
 
 //function to display next question
@@ -97,7 +98,7 @@ function nextQuestion() {
     } else {
         points.innerHTML = score + '/' + questionBank.length;
         quizBox.style.display = 'none';
-        scoreboard.style.display = 'block'
+        scoreboard.style.display = 'block';
     }
 
 }
@@ -122,10 +123,10 @@ function createTable(tableData, boundingElement) {
 
     tableData.forEach(function (rowData) {
         var row = document.createElement('tr');
-        row.style.border = "3px solid #000"
+        row.style.border = "3px solid #000";
         rowData.forEach(function (cellData) {
             var cell = document.createElement('td');
-            cell.style.border = "3px solid #000"
+            cell.style.border = "3px solid #000";
             cell.appendChild(document.createTextNode(cellData));
             row.appendChild(cell);
         });
@@ -148,7 +149,7 @@ function makeCorrectAnswerList() {
 
     for (var a = 0; a < questionBank.length; a++) {
 
-        tableData.push([questionBank[a]['question'], questionBank[a]['correct_answer'], ansChoice[a] == true ? ' Correct ' : ' Incorrect '])
+        tableData.push([questionBank[a].question, questionBank[a]['correct_answer'], ansChoice[a] == true ? ' Correct ' : ' Incorrect ']);
 
     }
     createTable(tableData, answers);
@@ -165,13 +166,13 @@ let preLoadedQuestions = async () => {
             console.error(err);
         });
 
-}
+};
 
 // bind calcScore to options
 function bindCalScoreToOptions() {
     Array.from(options).forEach((element) => {
         element.addEventListener('click', calcScore(this));
-    })
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
