@@ -1,123 +1,206 @@
 # Quiz Game
 
-Quiz game is a site developed to test users general knowledge. This quiz application has been developed with HTML and CSS for visualization, while the user interaction interface is based on Javascript. As the game progress, the application will display the remaining questions. A final appended HTML page show the total score and contains the correct answer list. 
+“Quiz spel”is an online game developed to test user’s general knowledge via a series of 20 questions that covers various topics. This quiz application has been developed with HTML and CSS for visualization, while the user interaction interface is based on JavaScript. As the game progresses, the application will display the remaining questions. A final appended HTML page show the total score and contains the correct answer list. 
 
-## Features
+## UX (User Experience)
 
-### Existing Features
+### User stories
 
-- **Cover page**
-- 
-   a. This section contains the “Start Quiz” button. A click on this button will take to appended HTML pages with questions.
-   
-   b. The background image and the logo is designed to capture the attention of the user and keep them engrossed.
-   
-- **The question area**
+- First Time Visitor Goals
 
-   a. Appended HTML pages that features questions, and multiple choice answers.
-   
-   b. A progress bar that shows the number of remaining questions is displayed.
-   
-   c. o	A button to take to the appended HTML pages that contains subsequent questions.
-   
-- **Score section**
 
-  a. An appended HTML page that contains the final score calculated by the number of correct answers.
-    
-   b. A Summary of how many questions answered correctly.
+ i.	As a first time visitor, I want to understand the rules to play the game.
+
+ ii.	Upon commencement, I want to be able to track my progress and know instantaneously whether my response to the questions are correct.
+ 
+ iii.	As the game ends, I want to see the final score and a table summarizing my response and the correct answers. 
+  
+  
+  - Returning Visitor Goals
+  
+  
+ i.	As a returning visitor, I want to play a new questionnaire to test my knowledge in multiple rounds.
+ 
+ ii.	As a returning visitor, I want to contact the developer with any questions that I may have.
+ 
+### Design
+
+- **Color scheme**
+
+i.	 The main colours used in the website are shades of blue and white.
+
+- **Typography**
+
+i.	The Arial font is the main font used throughout the website with Sans Serif as the fallback font. 
+
+- **Imagery**
+
+   No background image has been placed
    
-   c. A button to return to the quiz.
-   
-   d. A button for correct answers.
    
 ###    Wireframes
 
+- Home Page Wireframe
 
-###    Desktop Wireframes
+### Features
 
-  ![Desktop Wireframe (Page1)](https://user-images.githubusercontent.com/97182442/164991864-186595c0-ea81-4d60-8993-e1c12d5dfc49.png)
-  
-  
-![Desktop Wireframe (Page2)](https://user-images.githubusercontent.com/97182442/164991895-9ba1cac7-ffba-4416-82ee-d8c8c1730386.png)
+- Responsive on different devices.
 
-
-![Desktop Wireframe (Page3)](https://user-images.githubusercontent.com/97182442/164991898-614783dd-fd45-4c85-a290-5e3bcc6482ab.png)
+- Interactive elements for getting attention of users and making the website more attractive.
 
 
-###    Mobile Wireframe
+### Features Left to Implement
+
+- Adding a timer functionality to make the game more exciting.
+
+- Adding difficulty levels for e.g., easy, medium and hard.
+
+- Segregating questions based on topics for e.g., science, general knowledge, animal kingdom etc.
+
+### Technologies Used
+
+**Languages Used**
+
+- HTML
+- CSS
+- Javascript
+
+1. **Hover.css:**
+
+ Hover.css was used in buttons and it makes the page more dynamic.
+ 
+2. **Google Fonts:**
+
+Google fonts were used to import the 'Titillium Web' font into the style.css file which is used on all pages throughout the project.
+
+3. **Git** 
 
 
+Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+
+4. **GitHub**
+
+ 
+GitHub is used to store the projects code after being pushed from Git.
+
+5. **Balsamiq Wireframes**
+
+Downloadable software to create the wireframe mockups.
 
 
+6. **OpenTrivia Database**
 
-![Mobile Wireframe](https://user-images.githubusercontent.com/97182442/164991909-233ae720-66dd-4553-a1f6-2987882aebf0.png)
+A web API supplying quiz questions in JSON format.
+
+### Testing
+
+The W3C Markup Validator, W3C CSS Validator Services, Jshint validator were used to validate every page of the project to ensure there were no syntax errors in the project.
+
+- W3C Markup Validator
+
+- W3C CSS Validator Services
+
+- Jshint validator
+
+- Lighthouse testing
+
+### Testing User Stories from User Experience (UX) Section
+
+- First Time Visitor Goals
+
+1. As a first time visitor, I want to understand the rules to play the game.
 
 
-###    Testing
-- The game has been tested in different browsers: Chrome, Safari and Firefox.
+a. The homepage features a navigation bar with a “Help” tab. Clicking the tab will take the user to an appended HTML page describing, on a high level, the basic rules to play the game.
 
-- The results of the game were also checked.
+2. Upon commencement, I want to be able to track my progress and know instantaneously whether my response to the questions are correct.
 
-- A lighthouse test has been carried out to confirm that the colors and fonts used are easily accessible.
+ a.  A progress bar that shows the number of questions answered and the remaining number of questions is displayed.
 
-- The website was checked on different standard devices such as desktop, laptop and iPhone using the devtools device toolbar.
+ b. Multiple choice answers are enabled with hover functionality to highlight the choice and colour coded to indicate if the answer is correct (green) or not (red) instantaneously.
 
-###  Validator Testing   
+  c.   A “Next” button to take to the appended HTML pages that contains subsequent questions is included to skip questions.
 
-- The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+3. As the game ends, I want to see the final score and a table summarizing my response and the correct answers.
 
-- Jshint validator for checking errors in Javascript.
+    a. An appended HTML page that summarize the final score calculated by the number of correct answers to total questions.
+
+    b. Contains a button “Check Answers”, that will take to an appended HTML page with a table summarizing the correct answers to each question and user response.
+
+
+- Returning Visitor Goals
+
+1. As a returning visitor, I want to play a new questionnaire to test my knowledge in multiple rounds.
+
+ a. The score section contains a button “Play Again”, to start a new game with a new questionnaire
+ 
+2. As a returning visitor, I want to contact the developer with any questions that I may have.
+
+ a. A “contact” tab in the navigation bar will take the user to an appended HTML page to get in touch with the developer via email by filling in relevant information.
+ 
+ 
+###  Further Testing
+
+ 1.	The website was tested on Google Chrome, Internet Explorer and Microsoft Edge.
+ 
+ 2.	The website was checked on different standard devices such as desktop, laptop and iPhone using the devtools device toolbar.
+ 
+During development of this application, I regularly tested the responsiveness of the site using Google Chrome's Developer tools. In my CSS media query rules, I used 3 separate breakpoints to design the site for different screen sizes.
+ 
+- 1200 px width and below (medium screen size)
+- 600px width and below (small screen size)
+- 414px width and below
+
 
 ### Deployment
 
-- **GitHub Pages**
+
+**GitHub Pages**
 
 The project was deployed to GitHub Pages using the following steps...
 
 1. Log in to GitHub and locate the GitHub Repository.
+
 2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-3. Alternatively Click Here for a GIF demonstrating the process starting from Step 2.
-4. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-5. Under "Source", click the dropdown called "None" and select "Master Branch".
-6. The page will automatically refresh.
-7. Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
 
-- **Forking the GitHub Repository**
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
 
-1. Log in to GitHub and locate the GitHub Repository
+4. Under "Source", click the dropdown called "None" and select "Master Branch".
 
-2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+5. The page will automatically refresh.
 
-3. You should now have a copy of the original repository in your GitHub account.
+6. Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
 
-- Making a Local Clone
 
-1. Log in to GitHub and locate the GitHub Repository.
+**Making a Local Clone**
 
-2. Under the repository name, click "Clone or download".
+1.	Log in to GitHub and locate the GitHub Repository
 
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+2.	Under the repository name, click "Clone or download".
 
-4. Open Git Bash
+3.	To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
 
-5. Change the current working directory to the location where you want the cloned directory to be made.
+4.	Open Git Bash
 
-6. Type git clone, and then paste the URL you copied in Step 3.
+5.	Change the current working directory to the location where you want the cloned directory to be made.
 
-$ git clone https://github.com/ssreelakshmi88/Project-2
+6.	Type git clone, and then paste the URL you copied in Step 3.
 
-7. Press Enter.  Your local clone will be created.
-https://github.com/ssreelakshmi88/Project-2
+$ git clone https://github.com/ssreelakshmi88/Quiz-Game-Project-2.git
+
+7.	Press Enter. Your local clone will be created.
 
 ### Credits
 
-- **Content**
-1. Instructions to implement cover page were taken from Youtube tutorial..
+**Code**
 
-2. The questions used in the game are referred from https://opentdb.com/api_config.php
+•	The code to import the questions by way of an API call came from the OpenTrivia Database API website, with the selected parameters available to modify at this link: [https://opentdb.com/api_config.php]
 
-### Acknowledgements
+•	Stack overflow website
+
+•	Youtube tutorials
+
+**Acknowledgements**
 
 - A continuous and supportive feedback from the mentor.
 
@@ -127,8 +210,6 @@ https://github.com/ssreelakshmi88/Project-2
 
 
 
-
-
-
   
   
+
