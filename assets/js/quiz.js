@@ -1,8 +1,6 @@
 let question = document.getElementById('question');
 let quizBox = document.getElementById('quiz-box');
-let scorecard = document.getElementById('scorecard');
 let scoreBoard = document.getElementById('scoreboard');
-let progressText = document.getElementById("progressText");
 let progressBarFull = document.getElementById("progressBarFull");
 let option0 = document.getElementById('option0');
 let option1 = document.getElementById('option1');
@@ -10,13 +8,13 @@ let option2 = document.getElementById('option2');
 let option3 = document.getElementById('option3');
 let options = document.getElementsByClassName('option');
 let optionList = [option0, option1, option2, option3];
+let progress = document.getElementById('progress');
 let next = document.querySelector('.next');
 let points = document.getElementById('score');
-let span = document.querySelectorAll('span');
 let i = 0;
 let score = 0;
 let ansChoice = [];
-let timerSpan = document.getElementById("timer");
+var index = 0;
 //function to display questions
 function displayQuestion() {
     resetBackGround();
@@ -83,7 +81,7 @@ function nextQuestion() {
     } else {
         points.innerHTML = score + '/' + questionBank.length;
         quizBox.style.display = 'none';
-        scoreboard.style.display = 'block';
+        scoreBoard.style.display = 'block';
     }
 }
 //click events to next button
@@ -96,18 +94,15 @@ function playAgain() {
 function createTable(tableData, boundingElement) {
     var table = document.createElement('table');
     var tableBody = document.createElement('tbody');
-    //table.style.width = "50vw";
+
     table.classList.add('styled-table');
-    // table.style.border = "3px solid #000";
-    // table.style.borderWidth = "3px";
-    // table.style.borderColor = "#000";
-    // table.style.borderStyle = "solid";
+
     tableData.forEach(function (rowData) {
         var row = document.createElement('tr');
-        // row.style.border = "3px solid #000";
+
         rowData.forEach(function (cellData) {
             var cell = document.createElement('td');
-            // cell.style.border = "3px solid #000";
+
             cell.appendChild(document.createTextNode(cellData));
             row.appendChild(cell);
         });
@@ -121,7 +116,7 @@ function makeCorrectAnswerList() {
     var answerBank = document.getElementById('answerBank');
     var answers = document.getElementById('answers');
     answerBank.style.display = 'block';
-    scoreboard.style.display = 'none';
+    scoreBoard.style.display = 'none';
     var tableData = [];
     for (var a = 0; a < questionBank.length; a++) {
         tableData.push([questionBank[a].question, questionBank[a]['correct_answer'], ansChoice[a] == true ? ' Correct ' : ' Incorrect ']);

@@ -7,11 +7,9 @@
 
 }
 
-
 body {
 
     background-color: white;
-
 }
 
 img {
@@ -187,12 +185,9 @@ p {
 
         width: 20vw;
         height: auto;
-
     }
 
     .menu li {
-
-
         padding-left: 0;
         margin: 3.2%;
         font-size: 3.5vmin;

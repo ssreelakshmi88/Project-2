@@ -7,7 +7,7 @@
     font-family: -apple-system, Arial, sans-serif;
     font-size: 1rem;
     font-weight: 200;
-    line-height: 1.5;
+    line-height: 1;
     color: #212529;
     text-align: left;
     padding: 50px;
@@ -173,6 +173,17 @@ input[type="button"].contact-btn-block {
 }
 
 
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    .contact-body {
+        max-width: 60%;
+        padding: 135px;
+
+    }
+
+}
+
 @media only screen and (max-width: 600px) {
     .contact-form-control {
         width: auto;
@@ -203,7 +214,7 @@ input[type="button"].contact-btn-block {
     }
 
     .contact-body {
-        line-height: 5;
+        line-height: 2;
     }
 
 
