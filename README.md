@@ -192,13 +192,13 @@ The W3C Markup Validator, W3C CSS Validator Services, Jshint validator were used
 
 2. Upon commencement, I want to be able to track my progress and know instantaneously whether my response to the questions are correct.
 
- a.  A progress bar that shows the number of questions answered and the remaining number of questions is displayed.
+    a.  A progress bar that shows the number of questions answered and the remaining number of questions is displayed.
  
  
  
 ![Progress bar](https://user-images.githubusercontent.com/97182442/167935041-5fc2970f-4547-441f-ba32-4795dc9c2c88.png)
 
- b. Multiple choice answers are enabled with hover functionality to highlight the choice and colour coded to indicate if the answer is correct   (green) or not (red) instantaneously.
+     b. Multiple choice answers are enabled with hover functionality to highlight the choice and colour coded to indicate if the answer is correct   (green) or not (red) instantaneously.
  
  
  
@@ -213,7 +213,7 @@ The W3C Markup Validator, W3C CSS Validator Services, Jshint validator were used
 
 
 
- c. A “Skip” button to take to the appended HTML pages that contains subsequent questions is included to skip questions.
+    c. A “Skip” button to take to the appended HTML pages that contains subsequent questions is included to skip questions.
  
  
  
@@ -222,7 +222,7 @@ The W3C Markup Validator, W3C CSS Validator Services, Jshint validator were used
 
 3. As the game ends, I want to see the final score and a table summarizing my response and the correct answers.
 
-    a. An appended HTML page that summarize the final score calculated by the number of correct answers to total questions.
+       a. An appended HTML page that summarize the final score calculated by the number of correct answers to total questions.
     
     
     
@@ -230,7 +230,7 @@ The W3C Markup Validator, W3C CSS Validator Services, Jshint validator were used
     ![Score page](https://user-images.githubusercontent.com/97182442/167935752-a6592d95-8c5b-4eff-9201-3ca34e136a19.png)
 
 
-    b. Contains a button “Check Answers”, that will take to an appended HTML page with a table summarizing the correct answers to each question and user response.
+        b. Contains a button “Check Answers”, that will take to an appended HTML page with a table summarizing the correct answers to each question and user response.
 
 
     
@@ -244,13 +244,13 @@ The W3C Markup Validator, W3C CSS Validator Services, Jshint validator were used
 
 1. As a returning visitor, I want to play a new questionnaire to test my knowledge in multiple rounds.
 
-   a. The score section contains a button “Play Again”, to start a new game with a new questionnaire
+      a. The score section contains a button “Play Again”, to start a new game with a new questionnaire
     
    
  ![Play Again](https://user-images.githubusercontent.com/97182442/167936965-d9b84b8a-150f-4e41-8211-e4df1f140c99.png)
  
  
-b. With the "New Game" button in navigation bar a user can start a new game when they are already in middle of the game.
+     b. With the "New Game" button in navigation bar a user can start a new game when they are already in middle of the game.
 
 
 
@@ -259,7 +259,7 @@ b. With the "New Game" button in navigation bar a user can start a new game when
 2. As a returning visitor, I want to contact the developer with any questions that I may have.
 
 
-  a. A “contact” tab in the navigation bar will take the user to an appended HTML page to get in touch with the developer via email by filling in relevant information.
+      a. A “contact” tab in the navigation bar will take the user to an appended HTML page to get in touch with the developer via email by filling in relevant information.
  
  
  
