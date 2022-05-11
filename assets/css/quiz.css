@@ -7,7 +7,6 @@
 
  .menu li {
 
-
      padding-left: 0;
      margin: 3%;
      font-size: 3.5vmin;
@@ -16,7 +15,6 @@
 
  .heading {
      font-size: 3rem;
-
 
  }
 
@@ -97,7 +95,6 @@
  .score-section,
  .answerbank {
      width: 43rem;
-     background: lightskyblue;
      padding: 2rem;
      text-align: center;
      margin: auto;
@@ -110,13 +107,23 @@
  table {
      width: 100%;
      border-collapse: collapse;
-
+     margin: 33px 4;
+     font-size: 1em;
+     font-family: sans-serif;
+     min-width: 375px;
+     box-shadow: 0 0 20px rgb(0 0 0 / 15%);
+     background-color: skyblue;
+     padding: 33px 28px;
+     color: black;
+     text-align: left;
  }
+
+
 
  td {
      border: 1px solid #04AA6D;
      text-align: left;
-     padding: 0.5rem;
+     padding: 3rem;
  }
 
  .score-title {
@@ -130,7 +137,7 @@
      margin-left: 21px;
  }
 
- #score {
+ .score {
      font-size: 2.5rem;
  }
 
@@ -165,7 +172,7 @@
 
  }
 
- #progressBar {
+ .progressBar {
      text-align: center;
      width: 11rem;
      height: 6vh;
@@ -173,7 +180,7 @@
      margin-left: 15rem;
  }
 
- #progressBarFull {
+ .progressBarFull {
 
      background-color: #56a5eb;
      width: 0%;
@@ -216,7 +223,6 @@
 
      .questions {
 
-
          height: 69vw;
      }
 
@@ -234,7 +240,7 @@
      }
 
      .questions {
-         height: 78vw;
+         height: 60vw;
      }
 
      .option {
@@ -253,13 +259,13 @@
          margin-left: 5rem;
      }
 
-     #progressBar {
+     .progressBar {
 
          margin-left: 5rem;
      }
 
-     #score-btn,
-     #check-answer {
+     .score-btn,
+     .check-answer {
          margin-top: 1rem;
          padding: 0.20000000000000284rem 1rem;
          margin-bottom: 2rem;
@@ -272,10 +278,15 @@
      .menu li {
 
          padding-left: 4px;
-         margin: 3.2%;
-         font-size: 3.5vmin;
-         letter-spacing: 4px;
+         margin: 2.2%;
+         font-size: 2.5vmin;
+         letter-spacing: 2px;
 
+     }
+
+     div#question.quest {
+         margin-left: 2rem;
+         font-size: 1.5rem;
      }
 
      .questions {
@@ -291,7 +302,7 @@
 
      .next {
 
-         margin-left: 92px;
+         margin-left: 99px;
      }
 
      .stat {
@@ -299,14 +310,13 @@
          margin-left: 5rem;
      }
 
-     #progressBar {
+     .progressBar {
 
          margin-left: 5rem;
      }
 
      .status-item {
          display: grid;
-
          width: 60vw;
          height: 70vw;
 
@@ -315,7 +325,7 @@
      .progress-div {
          display: grid;
          width: 82vw;
-         height: 70vw;
+         height: 30vw;
      }
 
      .score-section,
@@ -323,10 +333,17 @@
 
          width: 24rem;
          margin-left: -32px;
+         padding: 0rem;
      }
 
-     score-btn,
-     #check-answer {
+     .score-btn,
+     .check-answer {
          margin-left: 19px;
+     }
+
+     table {
+         width: 40%;
+         font-size: 0.9em;
+         margin-left: 4rem;
      }
  }

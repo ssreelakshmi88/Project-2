@@ -51,13 +51,14 @@
     <div class="status-item">
         <div class="progress-div">
             <div id="progress" class="stat"></div>
-            <div id="progressBar">
-                <div id="progressBarFull"></div>
+            <div id="progressBar" class="progressBar">
+                <div id="progressBarFull" class="progressBarFull"></div>
             </div>
         </div>
 
         <div class="buttons">
-            <button type="button" class="next">Next</button>
+            <button type="button" class="next">Skip</button>
+
         </div>
     </div>
 
@@ -65,7 +66,7 @@
 <!-- scoreboard section -->
 <div id="scoreboard" class="score-section">
     <h2 id="score-title" class="score-title">Your Score</h2>
-    <div id="score"></div>
+    <div id="score" id="score"></div>
     <button type="button" class="score-btn" onclick="playAgain()">Play Again</button>
     <button type="button" class="check-answer" onclick="makeCorrectAnswerList()">Check Answers</button>
 </div>
@@ -73,7 +74,7 @@
 <!-- answers section -->
 <div id="answerBank" class="answerbank">
     <h2>Answer table :</h2>
-    <ol type="1" id="answers" class="answers">
+    <ol type="1" id="answers" class="answer">
 
     </ol>
     <button type="button" class="score-btn" onclick="playAgain()">Play Again</button>
