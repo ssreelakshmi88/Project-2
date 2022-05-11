@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/quiz.css">
 
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.ico">
 
 </head>
 
@@ -67,8 +67,8 @@
 <div id="scoreboard" class="score-section">
     <h2 id="score-title" class="score-title">Your Score</h2>
     <div id="score" class="score"></div>
-    <button type="button" class="score-btn" onclick="playAgain()">Play Again</button>
-    <button type="button" class="check-answer" onclick="makeCorrectAnswerList()">Check Answers</button>
+    <button id="score-btn" type="button" class="score-btn">Play Again</button>
+    <button id="check-answer" type="button" class="check-answer">Check Answers</button>
 </div>
 
 <!-- answers section -->
@@ -77,7 +77,7 @@
     <ol type="1" id="answers" class="answer">
 
     </ol>
-    <button type="button" class="score-btn" onclick="playAgain()">Play Again</button>
+    <button id="play-again" type="button" class="score-btn">Play Again</button>
 </div>
 
 <script src="../assets/js/quiz.js"></script>

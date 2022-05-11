@@ -173,7 +173,7 @@
  table {
      width: 100%;
      border-collapse: collapse;
-     margin: 33px 4;
+     margin: 33px 4px;
      font-size: 1em;
      box-shadow: 0 0 20px rgb(0 0 0 / 15%);
      background-color: skyblue;
@@ -198,6 +198,11 @@
 
          margin: 2%;
      }
+
+     .container {
+         margin-left: 80px;
+     }
+
  }
 
 
@@ -211,7 +216,7 @@
      }
 
      .container {
-         margin-left: 44px;
+         margin-left: 40px;
      }
 
      .progressBar {
@@ -242,15 +247,21 @@
      }
 
      .option:hover {
-         color: none;
+         text-decoration: none;
+
      }
 
  }
 
  @media screen and (max-width: 768px) {
      h1 {
+         font-size: 4rem;
          padding-top: 120px;
 
+     }
+
+     .container {
+         margin-left: 10px;
      }
 
      .questions {
@@ -315,7 +326,8 @@
      }
 
      .option:hover {
-         color: none;
+         text-decoration: none;
+
      }
 
      .next {
@@ -336,7 +348,7 @@
      .status-item {
          display: grid;
          width: 60vw;
-         height: 70vw;
+         height: 70vh;
 
      }
 

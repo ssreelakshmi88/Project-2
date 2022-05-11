@@ -1,3 +1,5 @@
+/*jshint esversion: 8 */
+
 let question = document.getElementById('question');
 let quizBox = document.getElementById('quiz-box');
 let scoreBoard = document.getElementById('scoreboard');
@@ -11,10 +13,16 @@ let optionList = [option0, option1, option2, option3];
 let progress = document.getElementById('progress');
 let next = document.querySelector('.next');
 let points = document.getElementById('score');
+
+let check_answer = document.getElementById('check-answer');
+let score_btn = document.getElementById('score-btn');
+let play_again = document.getElementById('play-again');
+
 let i = 0;
 let score = 0;
 let ansChoice = [];
 var index = 0;
+
 //function to display questions
 function displayQuestion() {
     resetBackGround();
@@ -71,7 +79,7 @@ function calcScore(e) {
 }
 
 function isValidAndAcceptableScore(e) {
-    return e.innerHTML === questionBank[i]['correct_answer'] && score < questionBank.length;
+    return e.innerHTML === questionBank[i].correct_answer && score < questionBank.length;
 }
 //function to display next question
 function nextQuestion() {
@@ -84,12 +92,24 @@ function nextQuestion() {
         scoreBoard.style.display = 'block';
     }
 }
+
 //click events to next button
 next.addEventListener('click', nextQuestion);
-//Play Again
+check_answer.addEventListener('click', makeCorrectAnswerList);
+score_btn.addEventListener('click', playAgain);
+play_again.addEventListener('click', playAgain);
+
+
+/** Play Again */
 function playAgain() {
     location.reload();
 }
+
+
+function cleanDataCell(cellData) {
+    return cellData.replace(/&qu/g, '').replace(/ot\;/g, '').replace(/&#039;s\;/g, '').replace(/&rqduo\;/g, '');
+}
+
 //create table in html using 2Darray tableData
 function createTable(tableData, boundingElement) {
     var table = document.createElement('table');
@@ -101,6 +121,7 @@ function createTable(tableData, boundingElement) {
         var row = document.createElement('tr');
 
         rowData.forEach(function (cellData) {
+            cellData = cleanDataCell(cellData);
             var cell = document.createElement('td');
 
             cell.appendChild(document.createTextNode(cellData));
@@ -111,7 +132,7 @@ function createTable(tableData, boundingElement) {
     table.appendChild(tableBody);
     boundingElement.appendChild(table);
 }
-//function to check Answers
+/** function to check Answers */
 function makeCorrectAnswerList() {
     var answerBank = document.getElementById('answerBank');
     var answers = document.getElementById('answers');
@@ -119,7 +140,7 @@ function makeCorrectAnswerList() {
     scoreBoard.style.display = 'none';
     var tableData = [];
     for (var a = 0; a < questionBank.length; a++) {
-        tableData.push([questionBank[a].question, questionBank[a]['correct_answer'], ansChoice[a] == true ? ' Correct ' : ' Incorrect ']);
+        tableData.push([questionBank[a].question, questionBank[a].correct_answer, ansChoice[a] == true ? ' Correct ' : ' Incorrect ']);
     }
     createTable(tableData, answers);
 }
@@ -139,6 +160,9 @@ function bindCalScoreToOptions() {
         options[x].addEventListener('click', calcScore);
     }
 }
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     preLoadedQuestions().then(() => {
         console.log(questionBank);
