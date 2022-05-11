@@ -1,3 +1,5 @@
+/* Logo and menu bar*/
+
 img {
     bottom: 10px;
 }
@@ -7,6 +9,7 @@ img,
     line-height: 20px;
 }
 
+/* Help container*/
 
 .help-container h1 {
     margin-bottom: 25px;
@@ -33,6 +36,8 @@ img,
     color: green;
 }
 
+
+/* MEDIA QUERIES*/
 
 
 @media only screen and (max-width: 1200px) {

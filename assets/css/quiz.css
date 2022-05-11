@@ -1,379 +1,385 @@
- h1 {
-
-     text-align: center;
-     padding-top: 95px;
-     padding-right: 65px;
-     margin-right: 24px;
- }
-
- .menu li {
-
-     padding-left: 0;
-     margin: 3%;
-     font-size: 3.5vmin;
- }
+  /* Menu bar and heading */
 
+  h1 {
 
- .heading {
-     font-size: 3rem;
-     padding-right: 5px;
+      text-align: center;
+      padding-top: 95px;
+      padding-right: 65px;
+      margin-right: 24px;
+  }
+
+  .menu li {
+
+      padding-left: 0;
+      margin: 3%;
+      font-size: 3.5vmin;
+  }
 
- }
 
+  .heading {
+      font-size: 3rem;
+      padding-right: 5px;
 
+  }
 
- /* Quiz box */
-
- div#question.quest {
-     margin-left: 4rem;
-     font-size: 1.5rem;
- }
 
- .questions {
 
-     margin: 3rem 2rem;
-     width: 70vw;
-     padding: 2rem;
-     border-radius: 4rem;
-     border: 1px solid black;
- }
+  /* Quiz box */
 
+  div#question.quest {
+      margin-left: 4rem;
+      font-size: 1.5rem;
+  }
 
- .option {
-     margin-bottom: 1.0rem;
-     margin-left: -2rem;
-     font-size: 1.2rem;
-     border-bottom: solid 0.1rem black;
-     width: 32rem;
-     height: 4vh;
-     background: skyblue;
-     border-radius: 1rem;
-     padding: 0.5rem;
- }
+  .questions {
 
- .option:hover {
-     color: blueviolet;
- }
+      margin: 3rem 2rem;
+      width: 70vw;
+      padding: 2rem;
+      border-radius: 4rem;
+      border: 1px solid black;
+  }
 
- .answer {
-     margin-top: 2.5rem;
- }
-
- /* Status and progress of the game */
- .stat {
-     margin-top: 1.5rem;
-     color: rgb(6, 17, 168);
-     font-size: 2rem;
-     margin-left: 15rem;
- }
-
-
- button {
-     padding: 0.2rem 4rem;
-     border: none;
-     outline: none;
-     font-size: 1.5rem;
-     border-radius: 1.5rem;
-     color: white;
-     background: blue;
-     margin-bottom: 7rem;
-     margin-left: 26px;
- }
-
- .next {
-     margin-bottom: 18px;
-     color: white;
-     margin-left: 205px;
- }
-
-
- button:active {
-     background: lavender;
- }
-
- /* Progress Bar */
-
- .status-item {
 
-     display: flex;
-     justify-content: flex-start;
-     height: fit-content;
-     align-items: end;
-     line-height: normal;
- }
+  .option {
+      margin-bottom: 1.0rem;
+      margin-left: -2rem;
+      font-size: 1.2rem;
+      border-bottom: solid 0.1rem black;
+      width: 32rem;
+      height: 4vh;
+      background: skyblue;
+      border-radius: 1rem;
+      padding: 0.5rem;
+  }
 
- .progress-div {
-     display: flex;
-     align-items: flex-start;
-     justify-content: space-around;
-     flex-direction: column;
- }
+  .option:hover {
+      color: blueviolet;
+  }
 
+  .answer {
+      margin-top: 2.5rem;
+  }
+
+  /* Status and progress of the game */
+  .stat {
+      margin-top: 1.5rem;
+      color: rgb(6, 17, 168);
+      font-size: 2rem;
+      margin-left: 15rem;
+  }
+
+
+  button {
+      padding: 0.2rem 4rem;
+      border: none;
+      outline: none;
+      font-size: 1.5rem;
+      border-radius: 1.5rem;
+      color: white;
+      background: blue;
+      margin-bottom: 7rem;
+      margin-left: 26px;
+  }
+
+  .next {
+      margin-bottom: 18px;
+      color: white;
+      margin-left: 205px;
+  }
+
+
+  button:active {
+      background: lavender;
+  }
+
+  /* Progress Bar */
 
- .status-prefix {
+  .status-item {
 
-     font-size: 1rem;
+      display: flex;
+      justify-content: flex-start;
+      height: fit-content;
+      align-items: end;
+      line-height: normal;
+  }
 
- }
+  .progress-div {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+      flex-direction: column;
+  }
 
- .progressBar {
-     text-align: center;
-     width: 11rem;
-     height: 6vh;
-     border: 0.3rem solid #56a5eb;
-     margin-left: 15rem;
- }
 
- .progressBarFull {
+  .status-prefix {
 
-     background-color: #56a5eb;
-     width: 0%;
-     height: 6vh;
- }
+      font-size: 1rem;
 
+  }
 
+  .progressBar {
+      text-align: center;
+      width: 11rem;
+      height: 6vh;
+      border: 0.3rem solid #56a5eb;
+      margin-left: 15rem;
+  }
 
- /* Answerbank and scoreboard */
- .score-section,
- .answerbank {
-     width: 43rem;
-     padding: 2rem;
-     text-align: center;
-     margin: auto;
-     position: relative;
-     top: 5rem;
-     display: none;
-     height: 80vh;
-     overflow: auto;
-     z-index: 1;
- }
+  .progressBarFull {
 
+      background-color: #56a5eb;
+      width: 0%;
+      height: 6vh;
+  }
 
- .score-title {
-     margin: 1rem 0;
- }
 
- .score-btn,
- .check-answer {
-     margin-top: 1rem;
-     padding: 0.20000000000000284rem 1rem;
-     margin-left: 21px;
- }
 
- .score {
-     font-size: 3.5rem;
- }
+  /* Answerbank and scoreboard */
+  .score-section,
+  .answerbank {
+      width: 43rem;
+      padding: 2rem;
+      text-align: center;
+      margin: auto;
+      position: relative;
+      top: 5rem;
+      display: none;
+      height: 80vh;
+      overflow: auto;
+      z-index: 1;
+  }
 
- .answers {
-     margin-top: 1rem;
- }
 
- /* Answertable */
+  .score-title {
+      margin: 1rem 0;
+  }
 
- table {
-     width: 100%;
-     border-collapse: collapse;
-     margin: 33px 4px;
-     font-size: 1em;
-     box-shadow: 0 0 20px rgb(0 0 0 / 15%);
-     background-color: skyblue;
-     padding: 33px 28px;
-     color: black;
-     text-align: left;
- }
+  .score-btn,
+  .check-answer {
+      margin-top: 1rem;
+      padding: 0.20000000000000284rem 1rem;
+      margin-left: 21px;
+  }
 
+  .score {
+      font-size: 3.5rem;
+  }
 
+  .answers {
+      margin-top: 1rem;
+  }
 
- td {
-     border: 4px solid #0433aa;
-     text-align: left;
-     padding: 0.5rem;
- }
+  /* Answertable */
 
- /*Extra large devices (large laptops and desktops, 1200px and up) */
- @media only screen and (min-width: 1200px) {
+  table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 33px 4px;
+      font-size: 1em;
+      box-shadow: 0 0 20px rgb(0 0 0 / 15%);
+      background-color: skyblue;
+      padding: 33px 28px;
+      color: black;
+      text-align: left;
+  }
 
 
-     .menu li {
 
-         margin: 2%;
-     }
+  td {
+      border: 4px solid #0433aa;
+      text-align: left;
+      padding: 0.5rem;
+  }
 
-     .container {
-         margin-left: 80px;
-     }
 
- }
+  /* MEDIA QUERIES*/
 
 
- /*Media query for screens of 1200px and down*/
- @media screen and (max-width: 1200px) {
+  /*Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
 
-     .menu li {
 
-         margin: 2%;
+      .menu li {
 
-     }
+          margin: 2%;
+      }
 
-     .container {
-         margin-left: 40px;
-     }
+      .container {
+          margin-left: 80px;
+      }
 
-     .progressBar {
+  }
 
-         width: 20rem;
-     }
 
-     .questions {
-         width: 70vw;
+  /*Media query for screens of 1200px and down*/
+  @media screen and (max-width: 1200px) {
 
-     }
+      .menu li {
 
- }
+          margin: 2%;
 
- /* Extra small devices (phones, 600px and down) */
- @media only screen and (max-width: 600px) {
+      }
 
+      .container {
+          margin-left: 40px;
+      }
 
-     .questions {
+      .progressBar {
 
-         height: 69vw;
-     }
+          width: 20rem;
+      }
 
-     .option {
-         width: 100%;
-         margin-bottom: 10px;
-         height: 9vw;
-     }
+      .questions {
+          width: 70vw;
 
-     .option:hover {
-         text-decoration: none;
+      }
 
-     }
+  }
 
- }
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
 
- @media screen and (max-width: 768px) {
-     h1 {
-         font-size: 4rem;
-         padding-top: 120px;
 
-     }
+      .questions {
 
-     .container {
-         margin-left: 10px;
-     }
+          height: 69vw;
+      }
 
-     .questions {
-         height: 60vw;
-     }
+      .option {
+          width: 100%;
+          margin-bottom: 10px;
+          height: 9vw;
+      }
 
-     .option {
-         width: 100%;
-         margin-bottom: 10px;
-         height: 8vw;
-     }
+      .option:hover {
+          color: black;
 
-     .next {
 
-         margin-left: 92px;
-     }
+      }
 
-     .stat {
-         margin-top: auto;
-         margin-left: 5rem;
-     }
+  }
 
-     .progressBar {
+  @media screen and (max-width: 768px) {
+      h1 {
+          font-size: 4rem;
+          padding-top: 120px;
 
-         margin-left: 5rem;
-     }
+      }
 
-     .score-btn,
-     .check-answer {
-         margin-top: 1rem;
-         padding: 0.20000000000000284rem 1rem;
-         margin-bottom: 2rem;
-         margin-left: 25px;
-     }
- }
+      .container {
+          margin-left: 10px;
+      }
 
- @media screen and (max-width: 414px) {
+      .questions {
+          height: 60vw;
+      }
 
-     .menu li {
+      .option {
+          width: 100%;
+          margin-bottom: 10px;
+          height: 8vw;
+      }
 
-         padding-left: 4px;
-         margin: 2.2%;
-         font-size: 4.5vmin;
-         letter-spacing: 2px;
+      .next {
 
-     }
+          margin-left: 92px;
+      }
 
-     div#question.quest {
-         margin-left: 2rem;
-         font-size: 1.5rem;
-     }
+      .stat {
+          margin-top: auto;
+          margin-left: 5rem;
+      }
 
-     .questions {
-         height: 110vw;
-         width: auto;
-     }
+      .progressBar {
 
-     .option {
+          margin-left: 5rem;
+      }
 
-         height: 15vw;
+      .score-btn,
+      .check-answer {
+          margin-top: 1rem;
+          padding: 0.20000000000000284rem 1rem;
+          margin-bottom: 2rem;
+          margin-left: 25px;
+      }
+  }
 
-     }
+  @media screen and (max-width: 414px) {
 
-     .option:hover {
-         text-decoration: none;
+      .menu li {
 
-     }
+          padding-left: 4px;
+          margin: 2.2%;
+          font-size: 4.5vmin;
+          letter-spacing: 2px;
 
-     .next {
+      }
 
-         margin-left: 110px;
-     }
+      div#question.quest {
+          margin-left: 2rem;
+          font-size: 1.5rem;
+      }
 
-     .stat {
-         margin-top: auto;
-         margin-left: 5rem;
-     }
+      .questions {
+          height: 110vw;
+          width: auto;
+      }
 
-     .progressBar {
+      .option {
 
-         margin-left: 5rem;
-     }
+          height: 15vw;
 
-     .status-item {
-         display: grid;
-         width: 60vw;
-         height: 70vh;
+      }
 
-     }
+      .option:hover {
+          color: black;
+      }
 
-     .progress-div {
-         display: grid;
-         width: 82vw;
-         height: 30vw;
-     }
+      .next {
 
-     .score-section,
-     .answerbank {
+          margin-left: 110px;
+      }
 
-         width: 24rem;
-         margin-left: -32px;
-         padding: 0rem;
-     }
+      .stat {
+          margin-top: auto;
+          margin-left: 5rem;
+      }
 
-     .score-btn,
-     .check-answer {
-         margin-left: 19px;
-     }
+      .progressBar {
 
-     table {
-         width: 40%;
-         font-size: 0.9em;
-         margin-left: 1rem;
-     }
- }
+          margin-left: 5rem;
+      }
+
+      .status-item {
+          display: grid;
+          width: 60vw;
+          height: 70vh;
+
+      }
+
+      .progress-div {
+          display: grid;
+          width: 82vw;
+          height: 30vw;
+      }
+
+      .score-section,
+      .answerbank {
+
+          width: 24rem;
+          margin-left: -32px;
+          padding: 0rem;
+      }
+
+      .score-btn,
+      .check-answer {
+          margin-left: 19px;
+      }
+
+      table {
+          width: 40%;
+          font-size: 0.9em;
+          margin-left: 1rem;
+      }
+  }

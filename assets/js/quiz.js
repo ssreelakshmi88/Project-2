@@ -162,7 +162,6 @@ function bindCalScoreToOptions() {
 }
 
 
-
 document.addEventListener('DOMContentLoaded', () => {
     preLoadedQuestions().then(() => {
         console.log(questionBank);
