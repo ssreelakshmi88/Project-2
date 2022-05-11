@@ -308,16 +308,13 @@
          display: grid;
          width: 82vw;
          height: 70vw;
-
-
      }
 
      .score-section,
      .answerbank {
 
          width: 24rem;
-
-
+         margin-left: -32px;
      }
 
      score-btn,
