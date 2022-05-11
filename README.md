@@ -306,7 +306,11 @@ During development of this application, I regularly tested the responsiveness of
 
 **GitHub Pages**
 
-The project was deployed to GitHub Pages using the following steps...
+
+I accessed Code Institute template at [https://github.com/Code-Institute-Org/gitpod-full-template] and clicked on the "Use This Template" button. 
+
+
+The project was then deployed to GitHub Pages using the following steps...
 
 1. Log in to GitHub and locate the GitHub Repository.
 
