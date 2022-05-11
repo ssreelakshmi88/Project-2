@@ -2,6 +2,22 @@
 
 “Quiz spel”is an online game developed to test user’s general knowledge via a series of 20 questions that covers various topics. This quiz application has been developed with HTML and CSS for visualization, while the user interaction interface is based on JavaScript. As the game progresses, the application will display the remaining questions. A final appended HTML page show the total score and contains the correct answer list. 
 
+
+
+
+
+![Home Page](https://user-images.githubusercontent.com/97182442/167926745-e56b95ab-78e3-4da8-9e8b-f7bed8acfba3.png)
+
+
+
+
+
+![Quiz Page_screenshot](https://user-images.githubusercontent.com/97182442/167912904-d94d03f3-38ce-474b-8b9f-38ad94edaa3a.png)
+
+
+
+
+
 ## UX (User Experience)
 
 ### User stories
@@ -9,19 +25,19 @@
 - First Time Visitor Goals
 
 
- i.	As a first time visitor, I want to understand the rules to play the game.
+ 1.	As a first time visitor, I want to understand the rules to play the game.
 
- ii.	Upon commencement, I want to be able to track my progress and know instantaneously whether my response to the questions are correct.
+ 2.	Upon commencement, I want to be able to track my progress and know instantaneously whether my response to the questions are correct.
  
- iii.	As the game ends, I want to see the final score and a table summarizing my response and the correct answers. 
+ 3.	As the game ends, I want to see the final score and a table summarizing my response and the correct answers. 
   
   
   - Returning Visitor Goals
   
   
- i.	As a returning visitor, I want to play a new questionnaire to test my knowledge in multiple rounds.
+ 1.	As a returning visitor, I want to play a new questionnaire to test my knowledge in multiple rounds.
  
- ii.	As a returning visitor, I want to contact the developer with any questions that I may have.
+ 2.	As a returning visitor, I want to contact the developer with any questions that I may have.
  
 ### Design
 
@@ -31,7 +47,7 @@ i.	 The main colours used in the website are shades of blue and white.
 
 - **Typography**
 
-i.	The Arial font is the main font used throughout the website with Sans Serif as the fallback font. 
+i.	The Montserrat font is the main font used throughout the website with Sans Serif as the fallback font. 
 
 - **Imagery**
 
@@ -123,11 +139,41 @@ The W3C Markup Validator, W3C CSS Validator Services, Jshint validator were used
 
 - W3C Markup Validator
 
+ - HTML No errors were found when passing through the official W3C Markup validator.
+
+
+![Html validation](https://user-images.githubusercontent.com/97182442/167913626-fd28bfa6-cddd-43c3-b244-9e2e08f0e756.png)
+
+
+
 - W3C CSS Validator Services
+
+   - CSS No errors were found when passing through the official Jigsaw validator.
+
+
+![CSS validation](https://user-images.githubusercontent.com/97182442/167913585-1d41c4e1-c567-4cfa-89fc-e3e5df8e270a.png)
+
+
 
 - Jshint validator
 
+
+  - I discovered certain warnings like "'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)". All of these warnings were removed by installing a Eslintrc file in my gitpod.
+  
+
+
+![JSHint Validation](https://user-images.githubusercontent.com/97182442/167932047-3687c360-f8f1-47ed-9067-9743e3929338.png)
+
+
+
 - Lighthouse testing
+
+   -In Google Chrome devtools, I checked that the colors and the fonts are contrasting and easy to read. It is accessible while running through the lighthouse devtool. The results ranged from 92 to 100. Below are the results.
+
+
+
+![Lighthouse testing](https://user-images.githubusercontent.com/97182442/167925879-89438987-6183-4c5d-bf5b-b6383f3afa9b.png)
+
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -136,33 +182,89 @@ The W3C Markup Validator, W3C CSS Validator Services, Jshint validator were used
 1. As a first time visitor, I want to understand the rules to play the game.
 
 
-a. The homepage features a navigation bar with a “Help” tab. Clicking the tab will take the user to an appended HTML page describing, on a high level, the basic rules to play the game.
+   a. The homepage features a navigation bar with a “Help” tab. Clicking the tab will take the user to an appended HTML page describing, on a high level, the basic rules to play the game.
+   
+   
+   
+   
+![Help page](https://user-images.githubusercontent.com/97182442/167933068-25c03d56-db46-4c97-bdd4-b1545d6eb150.png)
+
 
 2. Upon commencement, I want to be able to track my progress and know instantaneously whether my response to the questions are correct.
 
  a.  A progress bar that shows the number of questions answered and the remaining number of questions is displayed.
+ 
+ 
+ 
+![Progress bar](https://user-images.githubusercontent.com/97182442/167935041-5fc2970f-4547-441f-ba32-4795dc9c2c88.png)
 
- b. Multiple choice answers are enabled with hover functionality to highlight the choice and colour coded to indicate if the answer is correct (green) or not (red) instantaneously.
+ b. Multiple choice answers are enabled with hover functionality to highlight the choice and colour coded to indicate if the answer is correct   (green) or not (red) instantaneously.
+ 
+ 
+ 
+ 
+ ![Quiz page_1](https://user-images.githubusercontent.com/97182442/167935166-c7b6b884-188b-4cf5-892b-fada014f9425.png)
+ 
+ 
+ 
+![Quiz page_2](https://user-images.githubusercontent.com/97182442/167935204-375f6940-bb2e-4214-ba52-d7cebb6f5e91.png)
 
-  c.   A “Next” button to take to the appended HTML pages that contains subsequent questions is included to skip questions.
+
+
+
+
+ c. A “Skip” button to take to the appended HTML pages that contains subsequent questions is included to skip questions.
+ 
+ 
+ 
+ ![Progress bar](https://user-images.githubusercontent.com/97182442/167935316-c77c7c1c-a5bf-48a3-8c4e-0e7066c5de06.png)
+
 
 3. As the game ends, I want to see the final score and a table summarizing my response and the correct answers.
 
     a. An appended HTML page that summarize the final score calculated by the number of correct answers to total questions.
+    
+    
+    
+    
+    ![Score page](https://user-images.githubusercontent.com/97182442/167935752-a6592d95-8c5b-4eff-9201-3ca34e136a19.png)
+
 
     b. Contains a button “Check Answers”, that will take to an appended HTML page with a table summarizing the correct answers to each question and user response.
+
+
+    
+ ![Score page](https://user-images.githubusercontent.com/97182442/167935752-a6592d95-8c5b-4eff-9201-3ca34e136a19.png)
+
+
+![Answers](https://user-images.githubusercontent.com/97182442/167936244-68be2a1f-3f44-48d4-b9f4-78974cc3f72b.png)
 
 
 - Returning Visitor Goals
 
 1. As a returning visitor, I want to play a new questionnaire to test my knowledge in multiple rounds.
 
- a. The score section contains a button “Play Again”, to start a new game with a new questionnaire
+   a. The score section contains a button “Play Again”, to start a new game with a new questionnaire
+    
+   
+ ![Play Again](https://user-images.githubusercontent.com/97182442/167936965-d9b84b8a-150f-4e41-8211-e4df1f140c99.png)
  
+ 
+b. With the "New Game" button in navigation bar a user can start a new game when they are already in middle of the game.
+
+
+
+![New Game](https://user-images.githubusercontent.com/97182442/167938424-0f89f7d9-ce30-41b7-aa21-ad2f8adb25a5.png)
+
 2. As a returning visitor, I want to contact the developer with any questions that I may have.
 
- a. A “contact” tab in the navigation bar will take the user to an appended HTML page to get in touch with the developer via email by filling in relevant information.
+
+  a. A “contact” tab in the navigation bar will take the user to an appended HTML page to get in touch with the developer via email by filling in relevant information.
  
+ 
+ 
+ ![Contact Page](https://user-images.githubusercontent.com/97182442/167938821-3db29b26-a0b7-4b53-a8df-d70a4389c52b.png)
+
  
 ###  Further Testing
 
@@ -177,8 +279,30 @@ During development of this application, I regularly tested the responsiveness of
 - 414px width and below
 
 
-### Deployment
 
+
+
+![Mobile Page](https://user-images.githubusercontent.com/97182442/167939763-96f7ad20-5985-4b2b-ac39-1198a3765470.jpeg)
+
+
+![Mobile page_1](https://user-images.githubusercontent.com/97182442/167939825-5efeba2a-7be0-46b3-bb05-3bcd6e287c93.jpeg)
+
+
+
+### Known Bugs
+
+
+
+ During evaluation few questions loaded from API database contained special characters as shown below:
+ 
+ 
+ 
+ 
+![Bugs in table](https://user-images.githubusercontent.com/97182442/167941710-cadc469f-86ea-4e9f-9752-d7732a7ad30d.png)
+
+
+
+### Deployment
 
 **GitHub Pages**
 
