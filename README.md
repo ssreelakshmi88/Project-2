@@ -40,9 +40,37 @@ i.	The Arial font is the main font used throughout the website with Sans Serif a
    
 ###    Wireframes
 
-- Home Page Wireframe
+
+- Desktop Wireframe
+
+
+![Desktop Wireframe (Page1)](https://user-images.githubusercontent.com/97182442/167911491-c690c4a1-abfa-4e3b-bf4a-f35c1e21ccc6.png)
+
+
+
+
+![Desktop Wireframe (Page2)](https://user-images.githubusercontent.com/97182442/167911549-397317b6-f464-4853-9a2a-3c33d1d72d45.png)
+
+
+
+
+![Desktop Wireframe (Page3)](https://user-images.githubusercontent.com/97182442/167911794-3db705f9-9224-4b00-8b4e-53d6b2c5cde5.png)
+
+
+![Desktop Wireframe ((Page4)](https://user-images.githubusercontent.com/97182442/167911819-69a97c0a-ac3e-41a0-98ff-519b87b955b7.png)
+
+
+
+- Mobile Wireframe
+
+
+![Mobile Wireframe](https://user-images.githubusercontent.com/97182442/167911923-ceca627e-4a92-4a32-8a95-382e02fc980a.png)
+
+
+
 
 ### Features
+
 
 - Responsive on different devices.
 
@@ -65,30 +93,27 @@ i.	The Arial font is the main font used throughout the website with Sans Serif a
 - CSS
 - Javascript
 
-1. **Hover.css:**
-
- Hover.css was used in buttons and it makes the page more dynamic.
  
-2. **Google Fonts:**
+1. **Google Fonts:**
 
 Google fonts were used to import the 'Titillium Web' font into the style.css file which is used on all pages throughout the project.
 
-3. **Git** 
+2. **Git** 
 
 
 Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 
-4. **GitHub**
+3. **GitHub**
 
  
 GitHub is used to store the projects code after being pushed from Git.
 
-5. **Balsamiq Wireframes**
+4. **Balsamiq Wireframes**
 
 Downloadable software to create the wireframe mockups.
 
 
-6. **OpenTrivia Database**
+5. **OpenTrivia Database**
 
 A web API supplying quiz questions in JSON format.
 
