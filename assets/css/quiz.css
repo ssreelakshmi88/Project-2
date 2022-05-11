@@ -17,12 +17,18 @@
  .heading {
      font-size: 3rem;
 
+
+ }
+
+ div#question.quest {
+     margin-left: 4rem;
+     font-size: 1.5rem;
  }
 
  .questions {
 
-     margin: 3rem auto;
-     width: 80vw;
+     margin: 3rem 2rem;
+     width: 70vw;
      padding: 2rem;
      border-radius: 4rem;
      border: 1px solid black;
@@ -31,12 +37,14 @@
 
  .option {
      margin-bottom: 1.0rem;
+     margin-left: -2rem;
      font-size: 1.2rem;
      border-bottom: solid 0.1rem black;
      width: 32rem;
      height: 4vh;
      background: skyblue;
      border-radius: 1rem;
+     padding: 0.5rem;
  }
 
  .option:hover {
@@ -96,7 +104,7 @@
      position: relative;
      top: 5rem;
      display: none;
-     height: 278vh;
+     height: 80vh;
  }
 
  table {
